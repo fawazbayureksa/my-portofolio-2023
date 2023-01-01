@@ -2,20 +2,19 @@ import React from 'react';
 
 const Template = ({ children }) => {
     return (
-        <div>
-            <header>
-                {/* <div className="logo">
-                    Fawwaz Bayureksa
-                </div> */}
-                <nav>
-                    <a href="#about">About</a>
-                    <a href="#education">Education</a>
-                    <a href="#skill">Skill</a>
-                    <a href="#project">Project</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </header>
-            <div>
+        <div className='bg-content'>
+            <div className='container'>
+                <header>
+                    <nav className=''>
+                        <a href="#about" className='animated-text'>ABOUT</a>
+                        <a href="#education" className='animated-text'>EDUCATION</a>
+                        <a href="#skill" className='animated-text'>SKILL</a>
+                        <a href="#project" className='animated-text'>PROJECT</a>
+                        <a href="#contact" className='animated-text'>CONTACT</a>
+                    </nav>
+                </header>
+            </div>
+            <div className='container animated-text pb-5'>
                 {children}
             </div>
         </div>
