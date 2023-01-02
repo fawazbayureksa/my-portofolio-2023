@@ -1,10 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap');
 
+/* Animasi */
+@keyframes cursor-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  /* 50% {
+    transform: rotate(180deg);
+  } */
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*  */
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
+
 
 header {
   display: flex;
@@ -20,15 +49,6 @@ header {
   animation: text-animation 2s ease-in-out;
 }
 
-@keyframes text-animation {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
 
 header .logo {
   font-size: 18px;
@@ -71,7 +91,6 @@ nav a:hover,
 nav a:focus {
   color: #fff;
   text-decoration: none;
-  transform: scale(1.2);
 }
 
 nav a::before {
@@ -100,20 +119,24 @@ nav a:focus::before {
 
 .section-one {
   display: flex;
-  margin-top: 25vh;
+  height: 100vh;
   justify-content: space-between;
+}
+
+.text-section-one {
+  margin-top: 25vh;
 }
 
 .section-two {
-  margin-top: 27vh;
-  justify-content: space-between;
+  height: 100vh;
+}
+
+.section-three {
+  height: 90vh;
 }
 
 .bg-section-one {
-  margin-top: 5vh;
-  position: absolute;
-  top: 30px;
-  right: 30px;
+  animation: cursor-animation 3s ease-in-out;
 }
 
 .text-h1-bold {
@@ -132,8 +155,10 @@ nav a:focus::before {
 }
 
 .text-about {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  color: #e3d7de;
+  line-height: 1.8;
 }
 
 .line {
@@ -146,10 +171,11 @@ nav a:focus::before {
   font-size: 28px;
   cursor: pointer;
   margin-right: 15px;
+  transition: color 0.5s;
 }
 
 .bg-E01685 {
-  background-color: #E01685 !important;
+  background-color: #E01685;
 }
 
 .my-pict {
@@ -159,4 +185,68 @@ nav a:focus::before {
   height: 250px;
   object-fit: cover;
   box-shadow: 1px 1px 1px 2px rgb(87, 83, 83);
+}
+
+.color-F7F1F1 {
+  color: #F7F1F1;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 10px;
+}
+
+button {
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  font-size: 20px;
+  background-color: #E01685;
+  border: none;
+  transition: background-color, color 0.5s;
+}
+
+button:hover,
+button:focus {
+  background-color: #ffffff;
+  color: #E01685;
+}
+
+.icon:hover,
+.icon:focus {
+  color: #E01685;
+}
+
+.card-education {
+  background-color: rgb(60, 9, 113);
+  height: 144px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: rgb(255, 253, 253);
+  transition: background-color 0.5s;
+}
+
+.card-education p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.card-education small {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.icon-school {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.card-education:hover {
+  background-color: #D42DB8;
 }
