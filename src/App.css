@@ -132,7 +132,7 @@ nav a:focus::before {
 }
 
 .section-three {
-  height: 90vh;
+  height: 100vh;
 }
 
 .bg-section-one {
@@ -219,12 +219,12 @@ button:focus {
 }
 
 .card-education {
-  background-color: rgb(60, 9, 113);
+  background-color: rgb(255, 255, 255);
   height: 144px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  color: rgb(255, 253, 253);
+  color: rgb(90, 46, 81);
   transition: background-color 0.5s;
 }
 
@@ -237,16 +237,42 @@ button:focus {
 .card-education small {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #fff;
+  color: rgb(78, 44, 90);
   margin-bottom: 0;
 }
 
 .icon-school {
   font-size: 3rem;
-  color: #ffffff;
+  color: #7a4b6a;
   margin-bottom: 0;
 }
 
 .card-education:hover {
-  background-color: #D42DB8;
+  background-color: #df80cf;
+}
+
+.card-skills {
+  background-color: rgb(255, 255, 255);
+  height: 144px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(54, 52, 52, 0.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 253, 253);
+  transition: background-color 0.5s;
+  margin-right: 25px;
+}
+
+.card-skills img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  object-fit: cover;
+}
+
+.card-skills:hover {
+  background-color: rgb(151, 92, 214);
 }
