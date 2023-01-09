@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Template from '../components/Template';
 import { skill } from './helpers/constant'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
 const Home = () => {
 
     const responsive = {
@@ -129,13 +128,46 @@ const Home = () => {
                     removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
                 >
                     {skill.map((i, index) => (
-                        // <div className="col-md-2">
                         <div className='card-skills mb-3' key={index}>
                             <img src={`/images/${i.logo}`} alt='javascript' />
                         </div>
-                        // </div>
                     ))}
                 </Carousel>
+            </section>
+            <section className='mt-5'>
+                {/* <hr className='line' /> */}
+                <h3 className='text-h3-bold text-center mb-3'>CONTACTS</h3>
+                <div className='row justify-content-around'>
+                    <div className='col-md-6'>
+                        <div className='d-flex mt-3'>
+                            <i className="far fa-envelope mr-1"></i>
+                            <h6 className='font-weight-bold'>fawwazbayureksa@gmail.com</h6>
+                        </div>
+                        <div className='d-flex mt-3'>
+                            <i className="fas fa-phone-alt mr-1"></i>
+                            <h6 className='font-weight-bold'>+6282394418669</h6>
+                        </div>
+                        <div className='d-flex mt-3'>
+                            <i className="fas fa-map-marker-alt mr-1"></i>
+                            <h6 className='font-weight-bold'>Makassar</h6>
+                        </div>
+                    </div>
+                    <div className='col-md-6'>
+                        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfepvjX1lcQbWGmnqlSVKcW3tTU4YlCilNGmrKHZDO2TC3ukw/formResponse
+                    "target="_blank" method="post"
+                        >
+                            <div >
+                                <input type="email" className="form-control mt-3" placeholder="Your E-mail" name="entry.178149943" required />
+                            </div>
+                            <div >
+                                <textarea className="form-control mt-3" placeholder="Message" name="entry.315198414" required></textarea>
+                            </div>
+                            <div className="mt-3">
+                                <button type="submit" name="submit" className="mt-2">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </section>
         </Template >
     );
