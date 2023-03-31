@@ -196,7 +196,7 @@ nav a:focus::before {
   font-size: 10px;
 }
 
-button {
+.button {
   display: inline-block;
   font-weight: bold;
   padding: 10px 20px;
@@ -205,12 +205,17 @@ button {
   background-color: #E01685;
   border: none;
   transition: background-color, color 0.5s;
+  text-decoration: none;
 }
 
-button:hover,
-button:focus {
+.button:hover,
+.button:focus {
   background-color: #ffffff;
   color: #E01685;
+}
+
+.link {
+  color: #0e0b0b;
 }
 
 .icon:hover,

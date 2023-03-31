@@ -4,6 +4,7 @@ import { skill } from './helpers/constant'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 const Home = () => {
 
     const responsive = {
@@ -26,20 +27,32 @@ const Home = () => {
         }
     };
 
+    const history = useHistory()
+    const onCv = () => {
+        history.pathname("https://drive.google.com/file/d/12DAb8ycedXIViT5XNS0HJnDNiOgKl40A/view?usp=share_link")
+    }
+    {/* <Link to={{ pathname: "https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies" }} target="_blank" /> */ }
     return (
         <Template>
             <section className="section-one ml-3">
                 <div className='text-section-one'>
                     <h1 className='text-h1-bold'>Hello! My Name is</h1>
                     <h1 className='text-h1-bold'>Fawwaz Bayureksa</h1>
-                    <h3 className='text-h3'>Junior Front-End Web & Mobile Developer</h3>
+                    <h3 className='text-h3'>Front-End Web & Mobile Developer</h3>
                     <div className='d-flex align-items-center py-3'>
-                        <button className='mr-2'>Curiculum Vitae</button>
-                        <i className="fab fa-github icon"></i>
-                        <i className="fab fa-gitlab icon"></i>
-                        <i className="fab fa-linkedin icon"></i>
-                        <i className="fab fa-twitter icon"></i>
-                        <i className="fab fa-facebook icon"></i>
+                        <a target="_blank" href='https://drive.google.com/file/d/12DAb8ycedXIViT5XNS0HJnDNiOgKl40A/view?usp=share_link' className='button mr-2'>Curiculum Vitae</a>
+                        <a className='link' target="_blank" href="https://github.com/fawazbayureksa/" >
+                            <i className="fab fa-github icon"></i>
+                        </a>
+                        <a className='link' target="_blank" href="https://gitlab.com/fawazbayureksa" >
+                            <i className="fab fa-gitlab icon"></i>
+                        </a>
+                        <a className='link' target="_blank" href="https://www.linkedin.com/in/fawwaz-bayureksa-406b891a3/" >
+                            <i className="fab fa-linkedin icon"></i>
+                        </a>
+                        <a className='link' target="_blank" href="https://twitter.com/FawazBayureksa" >
+                            <i className="fab fa-twitter icon"></i>
+                        </a>
                     </div>
                 </div>
                 <div className='bg-section-one'>
