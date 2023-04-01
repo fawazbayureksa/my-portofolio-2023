@@ -56,7 +56,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='bg-section-one'>
-                    <img className='ml-0' src='/images/astronot.png' alt='astronot' />
+                    <img className='ml-0' src='./images/astronot.png' alt='astronot' />
                 </div>
             </section>
             <section className='section-two ml-3'>
@@ -65,7 +65,7 @@ const Home = () => {
                 <div className='d-flex align-items-center'>
                     <div className='col-md-6'>
                         <div className='text-center'>
-                            <img src='/images/pict.jpg' className='my-pict' alt='my-pict' />
+                            <img src='./images/pict.jpg' className='my-pict' alt='my-pict' />
                         </div>
                     </div>
                     <div className='col-md-6 mt-5'>
@@ -119,7 +119,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className='col-md-5 bg-section-one'>
-                            <img className='ml-0' src='/images/astronot3.png' alt='astronot' />
+                            <img className='ml-0' src='./images/astronot3.png' alt='astronot' />
                         </div>
                     </div>
                 </AnimationOnScroll>
