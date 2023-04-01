@@ -142,7 +142,7 @@ const Home = () => {
                 >
                     {skill.map((i, index) => (
                         <div className='card-skills mb-3' key={index}>
-                            <img src={`/images/${i.logo}`} alt='javascript' />
+                            <img src={`./images/${i.logo}`} alt='javascript' />
                         </div>
                     ))}
                 </Carousel>
