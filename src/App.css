@@ -74,7 +74,7 @@ header nav a {
 
 .bg-content {
   color: #ffffff;
-  background: linear-gradient(147deg, #00D8B2 0%, #31367D 0%, #D42DB8 99%);
+  background: linear-gradient(147deg, #00D8B2 0%, #317d48 0%, #67d42d 99%);
   height: "100%";
 }
 
@@ -155,9 +155,9 @@ nav a:focus::before {
 }
 
 .text-about {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  color: #e3d7de;
+  color: #fff;
   line-height: 1.8;
 }
 
@@ -202,7 +202,7 @@ nav a:focus::before {
   padding: 10px 20px;
   color: white;
   font-size: 20px;
-  background-color: #E01685;
+  background-color: #e0c816;
   border: none;
   transition: background-color, color 0.5s;
   text-decoration: none;
@@ -211,16 +211,17 @@ nav a:focus::before {
 .button:hover,
 .button:focus {
   background-color: #ffffff;
-  color: #E01685;
+  color: #e0c816;
+  text-decoration: none;
 }
 
 .link {
-  color: #0e0b0b;
+  color: #ffffff;
 }
 
 .icon:hover,
 .icon:focus {
-  color: #E01685;
+  color: #e0c816;
 }
 
 .card-education {
@@ -229,7 +230,7 @@ nav a:focus::before {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  color: rgb(90, 46, 81);
+  color: #67d42d;
   transition: background-color 0.5s;
 }
 
@@ -242,25 +243,29 @@ nav a:focus::before {
 .card-education small {
   font-size: 0.8rem;
   font-weight: 600;
-  color: rgb(78, 44, 90);
+  color: #317d48;
   margin-bottom: 0;
 }
 
 .icon-school {
   font-size: 3rem;
-  color: #7a4b6a;
+  color: #67d42d;
   margin-bottom: 0;
 }
 
 .card-education:hover {
-  background-color: #df80cf;
+  background-color: #28653f;
+}
+
+.card-education:hover small {
+  color: #ffffff !important;
 }
 
 .card-skills {
   background-color: rgb(255, 255, 255);
   height: 144px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(76, 58, 75, 0.782);
+  box-shadow: 0 2px 4px rgba(74, 76, 58, 0.782);
   padding: 10px;
   display: flex;
   align-items: center;
@@ -279,7 +284,7 @@ nav a:focus::before {
 }
 
 .card-skills:hover {
-  background-color: rgb(151, 92, 214);
+  background-color: #bdffa3;
 }
 
 #scroll-on-top-button {
@@ -289,7 +294,8 @@ nav a:focus::before {
   color: #fff;
   border: none;
   border-radius: 10px;
-  font-size: 16px;
-  background-color: #7b6be4;
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgb(243, 160, 7);
   transform: rotate(-90deg);
 }

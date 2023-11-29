@@ -28,11 +28,11 @@ export const skill = [
         logo: 'github.png'
     },
     {
-        name: 'React JS',
+        name: 'ReactJS',
         logo: 'react.png'
     },
     {
-        name: 'React Native',
+        name: 'ReactNative',
         logo: 'react-native.png'
     },
     {

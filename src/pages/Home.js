@@ -4,7 +4,11 @@ import { skill } from './helpers/constant'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import myPict from '../assets/new_pict.jpg';
+import Astronot1 from '../assets/astronot.png';
+import Astronot2 from '../assets/astronot2.png';
+import Astronot3 from '../assets/astronot3.png';
+
 const Home = () => {
 
     const responsive = {
@@ -27,20 +31,17 @@ const Home = () => {
         }
     };
 
-    const history = useHistory()
-    const onCv = () => {
-        history.pathname("https://drive.google.com/file/d/12DAb8ycedXIViT5XNS0HJnDNiOgKl40A/view?usp=share_link")
-    }
+
     {/* <Link to={{ pathname: "https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies" }} target="_blank" /> */ }
     return (
         <Template>
-            <section className="section-one ml-3">
+            <section className="section-one ml-3" id=''>
                 <div className='text-section-one'>
                     <h1 className='text-h1-bold'>Hello! My Name is</h1>
                     <h1 className='text-h1-bold'>Fawwaz Bayureksa</h1>
-                    <h3 className='text-h3'>Front-End Web & Mobile Developer</h3>
+                    <h3 className='text-h3'>Software Developer</h3>
                     <div className='d-flex align-items-center py-3'>
-                        <a target="_blank" href='https://drive.google.com/file/d/12DAb8ycedXIViT5XNS0HJnDNiOgKl40A/view?usp=share_link' className='button mr-2'>Curiculum Vitae</a>
+                        <a target="_blank" href='https://drive.google.com/file/d/13TlaQReaR_uFXBRZBFy7mzjGjBQBgx5h/view?usp=sharing' className='button mr-2'>Curiculum Vitae</a>
                         <a className='link' target="_blank" href="https://github.com/fawazbayureksa/" >
                             <i className="fab fa-github icon"></i>
                         </a>
@@ -56,30 +57,30 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='bg-section-one'>
-                    <img className='ml-0' src='./images/astronot.png' alt='astronot' />
+                    <img className='ml-0' src={Astronot1} alt='astronot' />
                 </div>
             </section>
-            <section className='section-two ml-3'>
+            <section className='section-two ml-3' id='about'>
                 <hr className='line' />
                 <h3 className='text-h3-bold text-center'>ABOUT</h3>
                 <div className='d-flex align-items-center'>
                     <div className='col-md-6'>
                         <div className='text-center'>
-                            <img src='./images/pict.jpg' className='my-pict' alt='my-pict' />
+                            <img src={myPict} className='my-pict' alt='my-pict' />
                         </div>
                     </div>
                     <div className='col-md-6 mt-5'>
                         <h3 className='text-h3-bold'>Who i am ?</h3>
                         <p className='text-justify text-about'>
                             i'm a Associate's degree From informatics management study program at
-                            Politeknik LP3I Makassar based in Makassar, Indonesia , i've passion and motivation
-                            Tall, fast in learning and adapting skilled in making websites & mobile app ,
-                            i currently work as Front-End Developer
+                            Politeknik LP3I Makassar, Now i'm based in <span style={{ color: "#F4CE14" }}> Tangerang & Makassar Indonesia</span>, but willing to be placed anywhere, i've passion and motivation
+                            Tall in programming, fast in learning and adapting skilled and ready to learn something new on making Websites & Mobile Applications,
+                            i currently work as Software Developer at Fintech.
                         </p>
                     </div>
                 </div>
             </section>
-            <section className='section-three ml-3'>
+            <section className='section-three ml-3' id='education'>
                 <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
                     <hr className='line' />
                     <h3 className='text-h3-bold text-center'>EDUCATION</h3>
@@ -119,12 +120,57 @@ const Home = () => {
                             </div>
                         </div>
                         <div className='col-md-5 bg-section-one'>
-                            <img className='ml-0' src='./images/astronot3.png' alt='astronot' />
+                            <img className='ml-0' src={Astronot3} alt='astronot' />
                         </div>
                     </div>
                 </AnimationOnScroll>
             </section>
-            <section className=''>
+            <section className='section-three ml-3' id='experience'>
+                <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
+                    <hr className='line' />
+                    <h3 className='text-h3-bold text-center'>EXPERIENCE</h3>
+                    <div className='row align-items-center'>
+                        <div className='col-md-7'>
+                            <div className='card-education mb-3'>
+                                <div className='d-flex align-items-center'>
+                                    <div className='col-4'>
+                                        <i className='fa fa-building icon-school'></i>
+                                    </div>
+                                    <div className='col-8'>
+                                        <p>April 2022 - Desember 2022</p>
+                                        <small>
+                                            Front End Web & Mobile Developer
+                                        </small>
+                                        <p>
+                                            PT TEKINDO SOLUSI INDONESIA
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='card-education'>
+                                <div className='d-flex align-items-center'>
+                                    <div className='col-4'>
+                                        <i className='fa fa-building icon-school'></i>
+                                    </div>
+                                    <div className='col-8'>
+                                        <p>Januari 2023 - Now</p>
+                                        <small>
+                                            Full stack Developer | Software Developer
+                                        </small>
+                                        <p>
+                                            PT ABADI SEJAHTERA FINANSINDO
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='col-md-5 bg-section-one'>
+                            <img className='ml-0' src={Astronot2} alt='astronot' />
+                        </div>
+                    </div>
+                </AnimationOnScroll>
+            </section>
+            <section className='' id='skill'>
                 <hr className='line' />
                 <h3 className='text-h3-bold text-center mb-5'>SKILLS</h3>
                 <Carousel
@@ -142,12 +188,12 @@ const Home = () => {
                 >
                     {skill.map((i, index) => (
                         <div className='card-skills mb-3' key={index}>
-                            <img src={`./images/${i.logo}`} alt='javascript' />
+                            <img src={require(`../assets/${i.logo}`)} alt={i.name} />
                         </div>
                     ))}
                 </Carousel>
             </section>
-            <section className='mt-5'>
+            <section className='mt-5' id='contact'>
                 {/* <hr className='line' /> */}
                 <h3 className='text-h3-bold text-center mb-3'>CONTACTS</h3>
                 <div className='row justify-content-around'>
@@ -162,7 +208,7 @@ const Home = () => {
                         </div>
                         <div className='d-flex mt-3'>
                             <i className="fas fa-map-marker-alt mr-1"></i>
-                            <h6 className='font-weight-bold'>Makassar</h6>
+                            <h6 className='font-weight-bold'>Makassar | Tangerang, Indonesia</h6>
                         </div>
                     </div>
                     <div className='col-md-6'>
@@ -176,7 +222,7 @@ const Home = () => {
                                 <textarea className="form-control mt-3" placeholder="Message" name="entry.315198414" required></textarea>
                             </div>
                             <div className="mt-3">
-                                <button type="submit" name="submit" className="mt-2">Send Message</button>
+                                <button type="submit" name="submit" className="button mt-2">Send Message</button>
                             </div>
                         </form>
                     </div>

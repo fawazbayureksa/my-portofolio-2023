@@ -40,7 +40,7 @@ const Template = ({ children }) => {
                         <a href="#about" className='animated-text'>ABOUT</a>
                         <a href="#education" className='animated-text'>EDUCATION</a>
                         <a href="#skill" className='animated-text'>SKILL</a>
-                        {/* <a href="#project" className='animated-text'>PROJECT</a> */}
+                        <a href="#experience" className='animated-text'>EXPERIENCE</a>
                         <a href="#contact" className='animated-text'>CONTACT</a>
                     </nav>
                 </header>
