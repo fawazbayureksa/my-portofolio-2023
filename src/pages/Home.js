@@ -63,7 +63,7 @@ const Home = () => {
             <section className='section-two ml-3' id='about'>
                 <hr className='line' />
                 <h3 className='text-h3-bold text-center'>ABOUT</h3>
-                <div className='d-flex align-items-center'>
+                <div className='d-flex align-items-center' id='content-section-two'>
                     <div className='col-md-6'>
                         <div className='text-center'>
                             <img src={myPict} className='my-pict' alt='my-pict' />
@@ -84,8 +84,8 @@ const Home = () => {
                 <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
                     <hr className='line' />
                     <h3 className='text-h3-bold text-center'>EDUCATION</h3>
-                    <div className='row align-items-center'>
-                        <div className='col-md-7'>
+                    <div className='d-flex align-items-center' id='content-section-three-desktop'>
+                        <div className='col-md-7 col-xs-12 col-sm-12'>
                             <div className='card-education mb-3'>
                                 <div className='d-flex align-items-center'>
                                     <div className='col-4'>
@@ -119,8 +119,47 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='col-md-5 bg-section-one'>
+                        <div className='col-md-5 col-xs-12 col-sm-12 bg-section-two' id='section-astronot-3'>
                             <img className='ml-0' src={Astronot3} alt='astronot' />
+                        </div>
+                    </div>
+                    <div className='d-flex flex-column' id='content-section-three-mobile'>
+                        <div className='bg-section-three' id='section-astronot-3'>
+                            <img className='ml-0' src={Astronot3} alt='astronot' />
+                        </div>
+                        <div className=''>
+                            <div className='card-education mb-3'>
+                                <div className='d-flex align-items-center'>
+                                    <div className='col-4'>
+                                        <i className='fa fa-school icon-school'></i>
+                                    </div>
+                                    <div className='col-8'>
+                                        <p>2015-2018</p>
+                                        <small>
+                                            Accounting
+                                        </small>
+                                        <p>
+                                            SMK NEGERI 1 GOWA
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='card-education'>
+                                <div className='d-flex align-items-center'>
+                                    <div className='col-4'>
+                                        <i className='fa fa-school icon-school'></i>
+                                    </div>
+                                    <div className='col-8'>
+                                        <p>2018-2021</p>
+                                        <small>
+                                            Management informatics
+                                        </small>
+                                        <p>
+                                            POLITEKNIK LP3I MAKASSAR
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </AnimationOnScroll>
@@ -129,7 +168,7 @@ const Home = () => {
                 <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
                     <hr className='line' />
                     <h3 className='text-h3-bold text-center'>EXPERIENCE</h3>
-                    <div className='row align-items-center'>
+                    <div className='d-flex align-items-center' id='content-section-three-desktop'>
                         <div className='col-md-7'>
                             <div className='card-education mb-3'>
                                 <div className='d-flex align-items-center'>
@@ -166,6 +205,45 @@ const Home = () => {
                         </div>
                         <div className='col-md-5 bg-section-one'>
                             <img className='ml-0' src={Astronot2} alt='astronot' />
+                        </div>
+                    </div>
+                    <div className='d-flex flex-column' id='content-section-three-mobile'>
+                        <div className='bg-section-three' id='section-astronot-3'>
+                            <img className='ml-0' src={Astronot2} alt='astronot' />
+                        </div>
+                        <div className=''>
+                            <div className='card-education mb-3'>
+                                <div className='d-flex align-items-center'>
+                                    <div className='col-4'>
+                                        <i className='fa fa-building icon-school'></i>
+                                    </div>
+                                    <div className='col-8'>
+                                        <p>April 2022 - Desember 2022</p>
+                                        <small>
+                                            Front End Web & Mobile Developer
+                                        </small>
+                                        <p>
+                                            PT TEKINDO SOLUSI INDONESIA
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='card-education'>
+                                <div className='d-flex align-items-center'>
+                                    <div className='col-4'>
+                                        <i className='fa fa-building icon-school'></i>
+                                    </div>
+                                    <div className='col-8'>
+                                        <p>Januari 2023 - Now</p>
+                                        <small>
+                                            Full stack Developer | Software Developer
+                                        </small>
+                                        <p>
+                                            PT ABADI SEJAHTERA FINANSINDO
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </AnimationOnScroll>

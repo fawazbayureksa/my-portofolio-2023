@@ -139,6 +139,10 @@ nav a:focus::before {
   animation: cursor-animation 3s ease-in-out;
 }
 
+.bg-section-two {
+  animation: cursor-animation 3s ease-in-out;
+}
+
 .text-h1-bold {
   font-size: 2.5rem;
   font-weight: 700;
@@ -298,4 +302,127 @@ nav a:focus::before {
   padding: 10px;
   background-color: rgb(243, 160, 7);
   transform: rotate(-90deg);
+}
+
+
+#content-section-three {
+  /* Styles for screens wider than 376px */
+  display: block;
+  align-items: center;
+}
+
+#content-section-three-mobile {
+  /* Styles for screens 376px or narrower */
+  display: none !important;
+  /* Initially hide for wider screens */
+}
+
+@media (max-width: 575px) {
+  body {
+    font-size: 80% !important;
+  }
+
+  .button {
+    display: inline-block;
+    font-weight: bold;
+    width: 160px !important;
+    padding: 8px 16px;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #e0c816;
+    border: none;
+    transition: background-color, color 0.5s;
+    text-decoration: none;
+  }
+
+  .text-h1-bold {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .text-h3 {
+    font-size: 1.5rem;
+  }
+
+  .section-one {
+    display: flex;
+    height: 100vh;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-two {
+    height: 80vh !important;
+  }
+
+  .section-two #content-section-two {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  #content-section-two .text-h3-bold {
+    font-size: 18px !important;
+  }
+
+  #content-section-two .text-about {
+    font-size: 14px !important;
+  }
+
+
+  .text-section-one {
+    margin-top: 20vh;
+  }
+
+  .bg-section-one {
+    animation: cursor-animation 3s ease-in-out;
+    position: absolute !important;
+    top: 0px;
+  }
+
+
+  #content-section-three-desktop {
+    display: none !important;
+    /* Hide for narrower screens */
+  }
+
+  #content-section-three-mobile {
+    display: flex !important;
+    /* Your mobile styles go here */
+  }
+
+  .card-education small {
+    font-size: 10px !important;
+  }
+
+  .card-education p {
+    font-size: 14px !important;
+  }
+
+
+  .bg-section-three {
+    align-self: center;
+  }
+
+  .bg-section-three img {
+    height: 50vh !important;
+    width: auto;
+  }
+
+  .bg-section-one img {
+    height: 55vh !important;
+    width: auto;
+  }
+
+
+  .my-pict {
+    border: 1px solid #e3e3e3 !important;
+    border-radius: 125px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 10px;
+    box-shadow: 1px 1px 1px 2px rgb(87, 83, 83);
+  }
 }
