@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap');
 
+:root {
+  --primary-color: #164863;
+  /* Ganti dengan nilai warna yang diinginkan */
+  --secondary-color: #427D9D;
+  --accent-color: #FF8F8F;
+  --third-color: #9BBEC8;
+  --fourth-color: #DDF2FD;
+  --text-color-dark: #333;
+  --text-color-white: #fff;
+}
+
+
 /* Animasi */
 @keyframes cursor-animation {
   0% {
@@ -32,6 +44,11 @@
   padding: 0;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+
 }
 
 
@@ -74,7 +91,7 @@ header nav a {
 
 .bg-content {
   color: #ffffff;
-  background: linear-gradient(147deg, #00D8B2 0%, #317d48 0%, #67d42d 99%);
+  background: linear-gradient(147deg, #00D8B2 0%, var(--primary-color) 0%, var(--secondary-color) 99%);
   height: "100%";
 }
 
@@ -89,7 +106,7 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  color: #fff;
+  color: var(--text-color-white);
   text-decoration: none;
 }
 
@@ -161,7 +178,7 @@ nav a:focus::before {
 .text-about {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-color-white);
   line-height: 1.8;
 }
 
@@ -179,16 +196,16 @@ nav a:focus::before {
 }
 
 .bg-E01685 {
-  background-color: #E01685;
+  background-color: var(--primary-color);
 }
 
 .my-pict {
-  border: 1px solid #e3e3e3 !important;
+  border: 1px solid var(--secondary-color) !important;
   border-radius: 125px;
   width: 250px;
   height: 250px;
   object-fit: cover;
-  box-shadow: 1px 1px 1px 2px rgb(87, 83, 83);
+  box-shadow: 1px 1px 1px 2px var(--third-color);
 }
 
 .color-F7F1F1 {
@@ -206,7 +223,7 @@ nav a:focus::before {
   padding: 10px 20px;
   color: white;
   font-size: 20px;
-  background-color: #e0c816;
+  background-color: var(--accent-color);
   border: none;
   transition: background-color, color 0.5s;
   text-decoration: none;
@@ -215,7 +232,7 @@ nav a:focus::before {
 .button:hover,
 .button:focus {
   background-color: #ffffff;
-  color: #e0c816;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -225,7 +242,7 @@ nav a:focus::before {
 
 .icon:hover,
 .icon:focus {
-  color: #e0c816;
+  color: var(--accent-color);
 }
 
 .card-education {
@@ -234,8 +251,9 @@ nav a:focus::before {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  color: #67d42d;
+  color: var(--secondary-color);
   transition: background-color 0.5s;
+  cursor: pointer;
 }
 
 .card-education p {
@@ -247,22 +265,22 @@ nav a:focus::before {
 .card-education small {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #317d48;
+  color: var(--primary-color);
   margin-bottom: 0;
 }
 
 .icon-school {
   font-size: 3rem;
-  color: #67d42d;
+  color: var(--primary-color);
   margin-bottom: 0;
 }
 
 .card-education:hover {
-  background-color: #28653f;
+  background-color: var(--fourth-color);
 }
 
 .card-education:hover small {
-  color: #ffffff !important;
+  color: var(--primary-color) !important;
 }
 
 .card-skills {
@@ -274,9 +292,10 @@ nav a:focus::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(255, 253, 253);
+  color: var(--secondary-color);
   transition: background-color 0.5s;
   margin-right: 25px;
+  cursor: pointer;
 }
 
 .card-skills img {
@@ -288,7 +307,7 @@ nav a:focus::before {
 }
 
 .card-skills:hover {
-  background-color: #bdffa3;
+  background-color: var(--fourth-color);
 }
 
 #scroll-on-top-button {
@@ -300,7 +319,7 @@ nav a:focus::before {
   border-radius: 10px;
   font-size: 20px;
   padding: 10px;
-  background-color: rgb(243, 160, 7);
+  background-color: var(--primary-color);
   transform: rotate(-90deg);
 }
 

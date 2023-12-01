@@ -39,8 +39,8 @@ const Template = ({ children }) => {
                     <nav className=''>
                         <a href="#about" className='animated-text'>ABOUT</a>
                         <a href="#education" className='animated-text'>EDUCATION</a>
-                        <a href="#skill" className='animated-text'>SKILL</a>
                         <a href="#experience" className='animated-text'>EXPERIENCE</a>
+                        <a href="#skill" className='animated-text'>SKILL</a>
                         <a href="#contact" className='animated-text'>CONTACT</a>
                     </nav>
                 </header>
