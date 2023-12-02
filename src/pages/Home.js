@@ -73,8 +73,8 @@ const Home = () => {
                         <h3 className='text-h3-bold'>Who i am ?</h3>
                         <p className='text-justify text-about'>
                             i'm a Associate's degree From informatics management study program at
-                            Politeknik LP3I Makassar, Now i'm based in <span style={{ color: "#F4CE14" }}> Tangerang & Makassar Indonesia</span>, but willing to be placed anywhere, i've passion and motivation
-                            Tall in programming, fast in learning and adapting skilled and ready to learn something new on making Websites & Mobile Applications,
+                            Politeknik LP3I Makassar, Now i'm based in <span style={{ color: "#F4CE14" }}> Tangerang & Makassar Indonesia</span>, but willing to be placed anywhere, i've passion and height motivation
+                            in programming, fast in learning and adapting skilled and ready to learn something new on making Websites & Mobile Applications,
                             i currently work as Software Developer at Fintech.
                         </p>
                     </div>
@@ -278,11 +278,11 @@ const Home = () => {
                     <div className='col-md-6'>
                         <div className='d-flex mt-3'>
                             <i className="far fa-envelope mr-1"></i>
-                            <h6 className='font-weight-bold'>fawwazbayureksa@gmail.com</h6>
+                            <a className='cursor-pointer text-decoration-none text-white' target='_blank' href="mailto:fawwazbayureksa@gmail.com"><h6 className='font-weight-bold'>fawwazbayureksa@gmail.com</h6></a>
                         </div>
                         <div className='d-flex mt-3'>
                             <i className="fas fa-phone-alt mr-1"></i>
-                            <h6 className='font-weight-bold'>+6282394418669</h6>
+                            <a className='cursor-pointer text-decoration-none text-white' target='_blank' href="https://wa.me/+6282394418669"> <h6 className='font-weight-bold'>+6282394418669</h6></a>
                         </div>
                         <div className='d-flex mt-3'>
                             <i className="fas fa-map-marker-alt mr-1"></i>
