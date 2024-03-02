@@ -1,16 +1,24 @@
 {
   "files": {
-    "main.css": "/my-portofolio-2023/static/css/main.b95c5258.css",
-    "main.js": "/my-portofolio-2023/static/js/main.7cba7912.js",
+    "main.css": "/my-portofolio-2023/static/css/main.e84684e9.css",
+    "main.js": "/my-portofolio-2023/static/js/main.4b27e4fd.js",
     "static/js/787.e71ad73d.chunk.js": "/my-portofolio-2023/static/js/787.e71ad73d.chunk.js",
+    "static/media/singaid_blog.png": "/my-portofolio-2023/static/media/singaid_blog.d4d2226149073324d3ac.png",
     "static/media/pict.jpg": "/my-portofolio-2023/static/media/pict.8457bc81aceebf0b25f9.jpg",
     "static/media/fa-solid-900.svg": "/my-portofolio-2023/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
     "static/media/fa-brands-400.svg": "/my-portofolio-2023/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
+    "static/media/mobile_tokodapur.png": "/my-portofolio-2023/static/media/mobile_tokodapur.cdd61417d69d17adf8a5.png",
+    "static/media/singaid_landing.png": "/my-portofolio-2023/static/media/singaid_landing.5c6b97564e6cda069ea9.png",
+    "static/media/marketing_landing.png": "/my-portofolio-2023/static/media/marketing_landing.23c6078e7ef544de66f6.png",
     "static/media/gitlab.png": "/my-portofolio-2023/static/media/gitlab.ab6347b2786155104ea6.png",
+    "static/media/web_forum.png": "/my-portofolio-2023/static/media/web_forum.d675c3f93f8f7b32679b.png",
     "static/media/mysql.png": "/my-portofolio-2023/static/media/mysql.167c88550478e6f0f85c.png",
+    "static/media/web_acution.png": "/my-portofolio-2023/static/media/web_acution.b3dfea0a813e20910445.png",
     "static/media/fa-solid-900.eot": "/my-portofolio-2023/static/media/fa-solid-900.9bbb245e67a133f6e486.eot",
+    "static/media/degadai_admin.png": "/my-portofolio-2023/static/media/degadai_admin.9462a390d5addb96790a.png",
     "static/media/fa-solid-900.ttf": "/my-portofolio-2023/static/media/fa-solid-900.be9ee23c0c6390141475.ttf",
     "static/media/laravel.png": "/my-portofolio-2023/static/media/laravel.2ebf4db3cc9f1b431979.png",
+    "static/media/web_detail_auction.png": "/my-portofolio-2023/static/media/web_detail_auction.669ba762130f75921892.png",
     "static/media/fa-regular-400.svg": "/my-portofolio-2023/static/media/fa-regular-400.4689f52cc96215721344.svg",
     "static/media/fa-brands-400.eot": "/my-portofolio-2023/static/media/fa-brands-400.23f19bb08961f37aaf69.eot",
     "static/media/fa-brands-400.ttf": "/my-portofolio-2023/static/media/fa-brands-400.527940b104eb2ea366c8.ttf",
@@ -35,12 +43,12 @@
     "static/media/revicons.ttf": "/my-portofolio-2023/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/my-portofolio-2023/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/my-portofolio-2023/index.html",
-    "main.b95c5258.css.map": "/my-portofolio-2023/static/css/main.b95c5258.css.map",
-    "main.7cba7912.js.map": "/my-portofolio-2023/static/js/main.7cba7912.js.map",
+    "main.e84684e9.css.map": "/my-portofolio-2023/static/css/main.e84684e9.css.map",
+    "main.4b27e4fd.js.map": "/my-portofolio-2023/static/js/main.4b27e4fd.js.map",
     "787.e71ad73d.chunk.js.map": "/my-portofolio-2023/static/js/787.e71ad73d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b95c5258.css",
-    "static/js/main.7cba7912.js"
+    "static/css/main.e84684e9.css",
+    "static/js/main.4b27e4fd.js"
   ]
 }
