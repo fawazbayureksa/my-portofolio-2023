@@ -40,6 +40,7 @@ const Template = ({ children }) => {
                         <a href="#about" className='animated-text'>ABOUT</a>
                         <a href="#education" className='animated-text'>EDUCATION</a>
                         <a href="#experience" className='animated-text'>EXPERIENCE</a>
+                        <a href="#project" className='animated-text'>PROJECTS</a>
                         <a href="#skill" className='animated-text'>SKILL</a>
                         <a href="#contact" className='animated-text'>CONTACT</a>
                     </nav>
@@ -51,7 +52,7 @@ const Template = ({ children }) => {
             <section className='mt-5'>
                 <footer className="d-flex justify-content-center">
                     <i className="fas fa-copyright mr-1"></i>
-                    <h6 className='font-weight-bold'> Copyright Fawwaz Bayureksa 2023</h6>
+                    <h6 className='font-weight-bold'> Copyright Fawwaz Bayureksa 2024</h6>
                 </footer>
             </section>
             <button ref={buttonRef} id='scroll-on-top-button'>

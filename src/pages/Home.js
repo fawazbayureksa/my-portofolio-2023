@@ -1,6 +1,6 @@
 import React from 'react';
 import Template from '../components/Template';
-import { skill } from './helpers/constant'
+import { projects, skill } from './helpers/constant'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -24,6 +24,25 @@ const Home = () => {
         tablet: {
             breakpoint: { max: 1024, min: 464 },
             items: 3
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+    const responsiveProjects = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 2
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 1
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 1
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
@@ -70,7 +89,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='col-md-6 mt-5'>
-                        <h3 className='text-h3-bold'>Who i am ?</h3>
+                        <h3 className='text-h3-bold'>Who am i?</h3>
                         <p className='text-justify text-about'>
                             i'm a Associate's degree From informatics management study program at
                             Politeknik LP3I Makassar, Now i'm based in <span style={{ color: "#F4CE14" }}> Tangerang & Makassar Indonesia</span>, but willing to be placed anywhere, i've passion and height motivation
@@ -134,12 +153,12 @@ const Home = () => {
                                         <i className='fa fa-school icon-school'></i>
                                     </div>
                                     <div className='col-8'>
-                                        <p>2015-2018</p>
+                                        <p>2018-2021</p>
                                         <small>
-                                            Accounting
+                                            Management informatics
                                         </small>
                                         <p>
-                                            SMK NEGERI 1 GOWA
+                                            POLITEKNIK LP3I MAKASSAR
                                         </p>
                                     </div>
                                 </div>
@@ -150,12 +169,12 @@ const Home = () => {
                                         <i className='fa fa-school icon-school'></i>
                                     </div>
                                     <div className='col-8'>
-                                        <p>2018-2021</p>
+                                        <p>2015-2018</p>
                                         <small>
-                                            Management informatics
+                                            Accounting
                                         </small>
                                         <p>
-                                            POLITEKNIK LP3I MAKASSAR
+                                            SMK NEGERI 1 GOWA
                                         </p>
                                     </div>
                                 </div>
@@ -247,6 +266,48 @@ const Home = () => {
                         </div>
                     </div>
                 </AnimationOnScroll>
+            </section>
+            <section className='section-three ml-3' id='project'>
+            {/* <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}> */}
+                <hr className='line' />
+                <h3 className='text-h3-bold text-center'>PROJECTS</h3>
+                {/* <div className="image-gallery"> */}
+                    {/* {projects.map(item => (
+                        <img key={item.id} className="image-wrapper" src={require(`../assets/projects/${item.image}`)} alt={item.name}  />
+                    ))} */}
+                    
+                {/* </div> */}
+                <Carousel
+                    swipeable={true}
+                    draggable={true}
+                    responsive={responsiveProjects}
+                    showDots={false}
+                    infinite={true}
+                    autoPlay={true}
+                    autoPlaySpeed={5000}
+                    showArrows={true}
+                    // customTransition="all .1"
+                    // transitionDuration={100}
+                    removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+                >
+                    {projects.map((item,index) => (
+                        <div className='card-projects mb-3' key={index}>
+                            <img key={index} src={require(`../assets/projects/${item.image}`)} alt={item.name}  />
+                            <div className="description">
+                                <h5>{item.name}</h5>
+                                <p>{item.description}</p>
+                                {item.url ? 
+                                    <a className='link-url' target='_blank' href={item.url}>Click Here ..</a> 
+                                    : 
+                                    null
+                                }
+                            </div>
+                        </div>
+                    ))}
+                </Carousel>
+
+
+            {/* </AnimationOnScroll> */}
             </section>
             <section className='' id='skill'>
                 <hr className='line' />

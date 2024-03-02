@@ -444,4 +444,64 @@ nav a:focus::before {
     margin-top: 10px;
     box-shadow: 1px 1px 1px 2px rgb(87, 83, 83);
   }
+
+}
+.card-projects {
+  position: relative; /* Required for absolute positioning of description */
+  background-color: rgb(255, 255, 255);
+  height: 70vh;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(74, 76, 58, 0.782);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+  transition: background-color 0.5s;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.card-projects img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(74, 76, 58, 0.782);
+}
+
+.description {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 10px;
+  border-radius: 20px;
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s;
+}
+
+.description p {
+  text-align: center ;
+  font-size: 14px;
+  color: var(--primary-color); /* Default text color */
+  font-weight: 600;
+}
+.description h5 {
+  color: var(--secondary-color); /* Default text color */
+  font-weight: 600;
+}
+.link-url{
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-projects:hover {
+  background-color: var(--fourth-color);
+}
+.card-projects:hover .description {
+  opacity: 1; /* Show on hover */
 }
