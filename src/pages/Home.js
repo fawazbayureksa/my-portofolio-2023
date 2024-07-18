@@ -60,7 +60,7 @@ const Home = () => {
                     <h1 className='text-h1-bold'>Fawwaz Bayureksa</h1>
                     <h3 className='text-h3'>Software Developer</h3>
                     <div className='d-flex align-items-center py-3'>
-                        <a target="_blank" href='https://drive.google.com/file/d/11tHoNx_N4gsGYsnMsxLbX780FFWGs_89/view?usp=sharing' className='button mr-2'>Curiculum Vitae</a>
+                        <a target="_blank" href='https://drive.google.com/file/d/1VP8Hz5KGpC-PBMKDPcme6wMihRaB1F-z/view?usp=sharing' className='button mr-2'>Curiculum Vitae</a>
                         <a className='link' target="_blank" href="https://github.com/fawazbayureksa/" >
                             <i className="fab fa-github icon"></i>
                         </a>
