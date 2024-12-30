@@ -4,7 +4,7 @@ import { projects, skill } from './helpers/constant'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import myPict from '../assets/new_pict.jpg';
+import myPict from '../assets/pict_12_24.jpg';
 import Astronot1 from '../assets/astronot.png';
 import Astronot2 from '../assets/astronot2.png';
 import Astronot3 from '../assets/astronot3.png';
