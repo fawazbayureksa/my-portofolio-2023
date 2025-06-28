@@ -54,23 +54,23 @@ const Home = () => {
     {/* <Link to={{ pathname: "https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies" }} target="_blank" /> */ }
     return (
         <Template>
-            <section className="section-one ml-3" id=''>
+            <section className="section-one ml-3" id='home'>
                 <div className='text-section-one'>
                     <h1 className='text-h1-bold'>Hello! My Name is</h1>
                     <h1 className='text-h1-bold'>Fawwaz Bayureksa</h1>
-                    <h3 className='text-h3'>Software Developer</h3>
+                    <h3 className='text-h3'>I build things for the web and mobile.</h3>
                     <div className='d-flex align-items-center py-3'>
-                        <a target="_blank" href='https://drive.google.com/file/d/1VP8Hz5KGpC-PBMKDPcme6wMihRaB1F-z/view?usp=sharing' className='button mr-2'>Curiculum Vitae</a>
-                        <a className='link' target="_blank" href="https://github.com/fawazbayureksa/" >
+                        <a target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/1VP8Hz5KGpC-PBMKDPcme6wMihRaB1F-z/view?usp=sharing' className='button mr-2'>View CV</a>
+                        <a className='link' target="_blank" rel="noopener noreferrer" href="https://github.com/fawazbayureksa/" >
                             <i className="fab fa-github icon"></i>
                         </a>
-                        <a className='link' target="_blank" href="https://gitlab.com/fawazbayureksa" >
+                        <a className='link' target="_blank" rel="noopener noreferrer" href="https://gitlab.com/fawazbayureksa" >
                             <i className="fab fa-gitlab icon"></i>
                         </a>
-                        <a className='link' target="_blank" href="https://www.linkedin.com/in/fawwaz-bayureksa-406b891a3/" >
+                        <a className='link' target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/fawwaz-bayureksa-406b891a3/" >
                             <i className="fab fa-linkedin icon"></i>
                         </a>
-                        <a className='link' target="_blank" href="https://twitter.com/FawazBayureksa" >
+                        <a className='link' target="_blank" rel="noopener noreferrer" href="https://twitter.com/FawazBayureksa" >
                             <i className="fab fa-twitter icon"></i>
                         </a>
                     </div>
@@ -81,7 +81,7 @@ const Home = () => {
             </section>
             <section className='section-two ml-3' id='about'>
                 <hr className='line' />
-                <h3 className='text-h3-bold text-center'>ABOUT</h3>
+                <h3 className='text-h3-bold text-center'>About Me</h3>
                 <div className='d-flex align-items-center' id='content-section-two'>
                     <div className='col-md-6'>
                         <div className='text-center'>
@@ -91,10 +91,7 @@ const Home = () => {
                     <div className='col-md-6 mt-5'>
                         <h3 className='text-h3-bold'>Who am i?</h3>
                         <p className='text-justify text-about'>
-                            i'm a Associate's degree From informatics management study program at
-                            Politeknik LP3I Makassar, Now i'm based in <span style={{ color: "#F4CE14" }}> Tangerang & Makassar Indonesia</span>, but willing to be placed anywhere, i've passion and height motivation
-                            in programming, fast in learning and adapting skilled and ready to learn something new on making Websites & Mobile Applications,
-                            i currently work as Software Developer at Fintech.
+                            I'm a passionate Software Developer create web and mobile applications. I hold an Associate's degree in Informatics Management and currently leverage my skills in the fast-paced Fintech industry. While I'm based in <span style={{ color: "#F4CE14" }}>Tangerang & Makassar, Indonesia</span>, I'm a quick learner, highly adaptable, and excited by the prospect of new challenges anywhere.
                         </p>
                     </div>
                 </div>
@@ -102,7 +99,7 @@ const Home = () => {
             <section className='section-three ml-3' id='education'>
                 <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
                     <hr className='line' />
-                    <h3 className='text-h3-bold text-center'>EDUCATION</h3>
+                    <h3 className='text-h3-bold text-center'>My Education</h3>
                     <div className='d-flex align-items-center' id='content-section-three-desktop'>
                         <div className='col-md-7 col-xs-12 col-sm-12'>
                             <div className='card-education mb-3'>
@@ -186,7 +183,7 @@ const Home = () => {
             <section className='section-three ml-3' id='experience'>
                 <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
                     <hr className='line' />
-                    <h3 className='text-h3-bold text-center'>EXPERIENCE</h3>
+                    <h3 className='text-h3-bold text-center'>Professional Experience</h3>
                     <div className='d-flex align-items-center' id='content-section-three-desktop'>
                         <div className='col-md-7'>
                             <div className='card-education mb-3'>
@@ -195,7 +192,7 @@ const Home = () => {
                                         <i className='fa fa-building icon-school'></i>
                                     </div>
                                     <div className='col-8'>
-                                        <p>April 2022 - Desember 2022</p>
+                                        <p>April 2022 - December 2022</p>
                                         <small>
                                             Front End Web & Mobile Developer
                                         </small>
@@ -211,9 +208,9 @@ const Home = () => {
                                         <i className='fa fa-building icon-school'></i>
                                     </div>
                                     <div className='col-8'>
-                                        <p>Januari 2023 - Now</p>
+                                        <p>January 2023 - Present</p>
                                         <small>
-                                            Full stack Developer | Software Developer
+                                            Full Stack Developer
                                         </small>
                                         <p>
                                             PT ABADI SEJAHTERA FINANSINDO
@@ -237,7 +234,7 @@ const Home = () => {
                                         <i className='fa fa-building icon-school'></i>
                                     </div>
                                     <div className='col-8'>
-                                        <p>April 2022 - Desember 2022</p>
+                                        <p>April 2022 - December 2022</p>
                                         <small>
                                             Front End Web & Mobile Developer
                                         </small>
@@ -253,9 +250,9 @@ const Home = () => {
                                         <i className='fa fa-building icon-school'></i>
                                     </div>
                                     <div className='col-8'>
-                                        <p>Januari 2023 - Now</p>
+                                        <p>January 2023 - Present</p>
                                         <small>
-                                            Full stack Developer | Software Developer
+                                            Full Stack Developer
                                         </small>
                                         <p>
                                             PT ABADI SEJAHTERA FINANSINDO
@@ -270,7 +267,7 @@ const Home = () => {
             <section className='section-three ml-3' id='project'>
             {/* <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}> */}
                 <hr className='line' />
-                <h3 className='text-h3-bold text-center'>PROJECTS</h3>
+                <h3 className='text-h3-bold text-center'>My Recent Work</h3>
                 {/* <div className="image-gallery"> */}
                     {/* {projects.map(item => (
                         <img key={item.id} className="image-wrapper" src={require(`../assets/projects/${item.image}`)} alt={item.name}  />
@@ -292,12 +289,12 @@ const Home = () => {
                 >
                     {projects.map((item,index) => (
                         <div className='card-projects mb-3' key={index}>
-                            <img key={index} src={require(`../assets/projects/${item.image}`)} alt={item.name}  />
+                            <img src={require(`../assets/projects/${item.image}`)} alt={item.name}  />
                             <div className="description">
                                 <h5>{item.name}</h5>
                                 <p>{item.description}</p>
                                 {item.url ? 
-                                    <a className='link-url' target='_blank' href={item.url}>Click Here ..</a> 
+                                    <a className='link-url' target='_blank' rel="noopener noreferrer" href={item.url}>View Project</a> 
                                     : 
                                     null
                                 }
@@ -311,7 +308,7 @@ const Home = () => {
             </section>
             <section className='' id='skill'>
                 <hr className='line' />
-                <h3 className='text-h3-bold text-center mb-5'>SKILLS</h3>
+                <h3 className='text-h3-bold text-center mb-5'>Technologies I Use</h3>
                 <Carousel
                     swipeable={true}
                     draggable={true}
@@ -334,16 +331,16 @@ const Home = () => {
             </section>
             <section className='mt-5' id='contact'>
                 {/* <hr className='line' /> */}
-                <h3 className='text-h3-bold text-center mb-3'>CONTACTS</h3>
+                <h3 className='text-h3-bold text-center mb-3'>Get In Touch</h3>
                 <div className='row justify-content-around'>
                     <div className='col-md-6'>
                         <div className='d-flex mt-3'>
                             <i className="far fa-envelope mr-1"></i>
-                            <a className='cursor-pointer text-decoration-none text-white' target='_blank' href="mailto:fawwazbayureksa@gmail.com"><h6 className='font-weight-bold'>fawwazbayureksa@gmail.com</h6></a>
+                            <a className='cursor-pointer text-decoration-none text-white' target='_blank' rel="noopener noreferrer" href="mailto:fawwazbayureksa@gmail.com"><h6 className='font-weight-bold'>fawwazbayureksa@gmail.com</h6></a>
                         </div>
                         <div className='d-flex mt-3'>
                             <i className="fas fa-phone-alt mr-1"></i>
-                            <a className='cursor-pointer text-decoration-none text-white' target='_blank' href="https://wa.me/+6282394418669"> <h6 className='font-weight-bold'>+6282394418669</h6></a>
+                            <a className='cursor-pointer text-decoration-none text-white' target='_blank' rel="noopener noreferrer" href="https://wa.me/+6282394418669"> <h6 className='font-weight-bold'>+6282394418669</h6></a>
                         </div>
                         <div className='d-flex mt-3'>
                             <i className="fas fa-map-marker-alt mr-1"></i>
@@ -351,8 +348,8 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='col-md-6'>
-                        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfepvjX1lcQbWGmnqlSVKcW3tTU4YlCilNGmrKHZDO2TC3ukw/formResponse
-                    "target="_blank" method="post"
+                        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfepvjX1lcQbWGmnqlSVKcW3tTU4YlCilNGmrKHZDO2TC3ukw/formResponse"
+                         target="_blank" method="post"
                         >
                             <div >
                                 <input type="email" className="form-control mt-3" placeholder="Your E-mail" name="entry.178149943" required />
