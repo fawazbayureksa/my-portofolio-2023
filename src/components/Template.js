@@ -52,7 +52,7 @@ const Template = ({ children }) => {
             <section className='mt-5'>
                 <footer className="d-flex justify-content-center">
                     <i className="fas fa-copyright mr-1"></i>
-                    <h6 className='font-weight-bold'> Copyright Fawwaz Bayureksa 2025</h6>
+                    <h6 className='font-weight-bold'> 2025 | Fawwaz Bayureksa</h6>
                 </footer>
             </section>
             <button ref={buttonRef} id='scroll-on-top-button'>

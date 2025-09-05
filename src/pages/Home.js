@@ -60,7 +60,7 @@ const Home = () => {
                     <h1 className='text-h1-bold'>Fawwaz Bayureksa</h1>
                     <h3 className='text-h3'>I build things for the web and mobile.</h3>
                     <div className='d-flex align-items-center py-3'>
-                        <a target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/1VP8Hz5KGpC-PBMKDPcme6wMihRaB1F-z/view?usp=sharing' className='button mr-2'>View CV</a>
+                        <a target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/1GCs7ho2Cd7j5K_IKrRhVa2Y6bAOiDiaa/view?usp=sharing' className='button mr-2'>View CV</a>
                         <a className='link' target="_blank" rel="noopener noreferrer" href="https://github.com/fawazbayureksa/" >
                             <i className="fab fa-github icon"></i>
                         </a>
@@ -91,7 +91,7 @@ const Home = () => {
                     <div className='col-md-6 mt-5'>
                         <h3 className='text-h3-bold'>Who am i?</h3>
                         <p className='text-justify text-about'>
-                            I'm a passionate Software Developer create web and mobile applications. I hold an Associate's degree in Informatics Management and currently leverage my skills in the fast-paced Fintech industry. While I'm based in <span style={{ color: "#F4CE14" }}>Tangerang & Makassar, Indonesia</span>, I'm a quick learner, highly adaptable, and excited by the prospect of new challenges anywhere.
+                            I'm a passionate Software Developer create web and mobile applications. I hold an Associate's degree in Informatics Management and currently leverage my skills in the fast-paced Fintech industry. While I'm based in <span style={{ color: "#F4CE14" }}>Jakarta & Makassar, Indonesia</span>, I'm a quick learner, highly adaptable, and excited by the prospect of new challenges anywhere.
                         </p>
                     </div>
                 </div>
@@ -276,16 +276,17 @@ const Home = () => {
                 {/* </div> */}
                 <Carousel
                     swipeable={true}
-                    draggable={true}
+                    draggable={false}
                     responsive={responsiveProjects}
                     showDots={false}
                     infinite={true}
                     autoPlay={true}
-                    autoPlaySpeed={5000}
+                    autoPlaySpeed={1500}
                     showArrows={true}
-                    // customTransition="all .1"
-                    // transitionDuration={100}
-                    removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+                    // keyBoardControl={true}
+                    customTransition="all.1"
+                    transitionDuration={100}
+                    // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
                 >
                     {projects.map((item,index) => (
                         <div className='card-projects mb-3' key={index}>
@@ -310,13 +311,13 @@ const Home = () => {
                 <hr className='line' />
                 <h3 className='text-h3-bold text-center mb-5'>Technologies I Use</h3>
                 <Carousel
-                    swipeable={true}
-                    draggable={true}
+                    swipeable={false}
+                    draggable={false}
                     responsive={responsive}
                     showDots={false}
                     infinite={true}
                     autoPlay={true}
-                    autoPlaySpeed={2000}
+                    autoPlaySpeed={1000}
                     // showArrows={false}
                     // customTransition="all .1"
                     // transitionDuration={100}
@@ -344,7 +345,7 @@ const Home = () => {
                         </div>
                         <div className='d-flex mt-3'>
                             <i className="fas fa-map-marker-alt mr-1"></i>
-                            <h6 className='font-weight-bold'>Makassar | Tangerang, Indonesia</h6>
+                            <h6 className='font-weight-bold'>Makassar | Jakarta, Indonesia</h6>
                         </div>
                     </div>
                     <div className='col-md-6'>

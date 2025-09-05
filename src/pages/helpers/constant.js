@@ -8,6 +8,26 @@ export const skill = [
         logo: 'php.png'
     },
     {
+        name: 'Rabbit MQ',
+        logo: 'rabbitmq.svg',
+    },
+    {
+        name: 'Redis',
+        logo: 'redis.png',
+    },
+    {
+        name: 'Jira',
+        logo: 'jira.png',
+    },
+    {
+        name: 'Laravel',
+        logo: 'laravel-new.png'
+    },
+    {
+        name: 'Linux',
+        logo: 'linux.webp'
+    },
+    {
         name: 'SQL',
         logo: 'sql.png'
     },
@@ -16,28 +36,28 @@ export const skill = [
         logo: 'mysql.png'
     },
     {
-        name: 'Laravel',
-        logo: 'laravel.png'
-    },
-    {
         name: 'Gitlab',
-        logo: 'gitlab.png'
+        logo: 'gitlab-new.jpg'
     },
     {
         name: 'Github',
-        logo: 'github.png'
+        logo: 'github-new.jpg'
     },
     {
         name: 'ReactJS',
-        logo: 'react.png'
+        logo: 'react-new.png'
     },
     {
         name: 'ReactNative',
         logo: 'react-native.png'
     },
     {
+        name: 'Golang (Basic)',
+        logo: 'go.png'
+    },
+    {
         name: 'Firebase',
-        logo: 'firebase.png'
+        logo: 'firebase-new.png'
     },
 ]
 
