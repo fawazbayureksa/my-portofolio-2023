@@ -50,32 +50,151 @@ const Home = () => {
         }
     };
 
-
-    {/* <Link to={{ pathname: "https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies" }} target="_blank" /> */ }
     return (
         <Template>
             <section className="section-one ml-3" id='home'>
-                <div className='text-section-one'>
-                    <h1 className='text-h1-bold'>Hello! My Name is</h1>
-                    <h1 className='text-h1-bold'>Fawwaz Bayureksa</h1>
-                    <h3 className='text-h3'>I build things for the web and mobile.</h3>
-                    <div className='d-flex align-items-center py-3'>
-                        <a target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/1GCs7ho2Cd7j5K_IKrRhVa2Y6bAOiDiaa/view?usp=sharing' className='button mr-2'>View CV</a>
-                        <a className='link' target="_blank" rel="noopener noreferrer" href="https://github.com/fawazbayureksa/" >
-                            <i className="fab fa-github icon"></i>
-                        </a>
-                        <a className='link' target="_blank" rel="noopener noreferrer" href="https://gitlab.com/fawazbayureksa" >
-                            <i className="fab fa-gitlab icon"></i>
-                        </a>
-                        <a className='link' target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/fawwaz-bayureksa-406b891a3/" >
-                            <i className="fab fa-linkedin icon"></i>
-                        </a>
-                        <a className='link' target="_blank" rel="noopener noreferrer" href="https://twitter.com/FawazBayureksa" >
-                            <i className="fab fa-twitter icon"></i>
-                        </a>
+                <div className='text-section-one' style={{
+                    animation: 'fadeInUp 1s ease-out',
+                    animationFillMode: 'both'
+                }}>
+                    <div style={{marginBottom: '10px'}}>
+                        <div className='d-flex' style={{gap: '10px', flexWrap: 'wrap'}}>
+                        <span style={{
+                                backgroundColor: 'rgba(244, 206, 20, 0.15)',
+                                border: '2px solid #F4CE14',
+                                padding: '8px 20px',
+                                borderRadius: '25px',
+                                fontSize: '0.9rem',
+                                fontWeight: 'bold',
+                                color: '#F4CE14',
+                                display: 'inline-block',
+                                animation: 'pulse 2s infinite'
+                            }}>
+                                <i className="fas fa-code mr-2"></i>
+                                Full Stack Developer
+                            </span>
+                        <span style={{
+                                backgroundColor: 'rgba(244, 206, 20, 0.15)',
+                                border: '2px solid #F4CE14',
+                                padding: '8px 20px',
+                                borderRadius: '25px',
+                                fontSize: '0.9rem',
+                                fontWeight: 'bold',
+                                color: '#F4CE14',
+                                display: 'inline-block',
+                                animation: 'pulse 2s infinite'
+                            }}>
+                                <i className="fas fa-code mr-2"></i>
+                                Software Developer
+                            </span>
+                        <span style={{
+                                backgroundColor: 'rgba(244, 206, 20, 0.15)',
+                                border: '2px solid #F4CE14',
+                                padding: '8px 20px',
+                                borderRadius: '25px',
+                                fontSize: '0.9rem',
+                                fontWeight: 'bold',
+                                color: '#F4CE14',
+                                display: 'inline-block',
+                                animation: 'pulse 2s infinite'
+                            }}>
+                                <i className="fas fa-code mr-2"></i>
+                                Mobile Developer
+                            </span>
+                            </div>
+                        </div>
+                        <h1 className='text-h1-bold' style={{marginTop: '20px'}}>Hello! I'm</h1>
+                        <h1 className='text-h1-bold' style={{
+                            background: 'linear-gradient(135deg, #F4CE14 0%, #FFF 50%, #F4CE14 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text',
+                            fontSize: '3.5rem',
+                            marginBottom: '15px'
+                        }}>Fawwaz Bayureksa</h1>
+                        <h3 className='text-h3' style={{marginBottom: '20px'}}>
+                            Building <span style={{color: '#F4CE14', fontWeight: 'bold'}}>enterprise-level</span> web & mobile applications
+                        </h3>
+                        
+                        <div style={{
+                            display: 'flex',
+                            gap: '15px',
+                            marginBottom: '25px',
+                            flexWrap: 'wrap'
+                        }}>
+                            <div style={{
+                                backgroundColor: 'rgba(255,255,255,0.05)',
+                                padding: '10px 15px',
+                                borderRadius: '10px',
+                                border: '1px solid rgba(244, 206, 20, 0.3)'
+                            }}>
+                                <i className="fas fa-briefcase" style={{color: '#F4CE14', marginRight: '8px'}}></i>
+                                <span style={{fontSize: '0.95rem'}}>4+ Years Experience</span>
+                            </div>
+                            <div style={{
+                                backgroundColor: 'rgba(255,255,255,0.05)',
+                                padding: '10px 15px',
+                                borderRadius: '10px',
+                                border: '1px solid rgba(244, 206, 20, 0.3)'
+                            }}>
+                                <i className="fas fa-project-diagram" style={{color: '#F4CE14', marginRight: '8px'}}></i>
+                                <span style={{fontSize: '0.95rem'}}>6+ Projects Delivered</span>
+                            </div>
+                            <div style={{
+                                backgroundColor: 'rgba(255,255,255,0.05)',
+                                padding: '10px 15px',
+                                borderRadius: '10px',
+                                border: '1px solid rgba(244, 206, 20, 0.3)'
+                            }}>
+                                <i className="fas fa-building" style={{color: '#F4CE14', marginRight: '8px'}}></i>
+                                <span style={{fontSize: '0.95rem'}}>Digital Industry</span>
+                            </div>
+                        </div>
+
+                        <p style={{
+                            fontSize: '1.05rem',
+                            marginBottom: '25px',
+                            color: '#ddd',
+                            maxWidth: '600px',
+                            lineHeight: '1.6'
+                        }}>
+                            Specialized in <strong style={{color: '#F4CE14'}}> Javascript, PHP, React.js, React Native, Laravel</strong>. 
+                            Currently start to learn how to be good at <strong style={{color: '#F4CE14'}}>Golang</strong>
+                        </p>
+
+                        <div className='d-flex align-items-center py-3'>
+                            <a target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/1GCs7ho2Cd7j5K_IKrRhVa2Y6bAOiDiaa/view?usp=sharing' 
+                                className='button mr-3' 
+                                style={{
+                                    padding: '12px 30px',
+                                    fontSize: '1rem',
+                                    fontWeight: 'bold',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '10px'
+                                }}>
+                                <i className="fas fa-download"></i>
+                                Download CV
+                            </a>
+                            <a className='link' target="_blank" rel="noopener noreferrer" href="https://github.com/fawazbayureksa/" >
+                                <i className="fab fa-github icon"></i>
+                            </a>
+                            <a className='link' target="_blank" rel="noopener noreferrer" href="https://gitlab.com/fawazbayureksa" >
+                                <i className="fab fa-gitlab icon"></i>
+                            </a>
+                            <a className='link' target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/fawwaz-bayureksa-406b891a3/" >
+                                <i className="fab fa-linkedin icon"></i>
+                            </a>
+                            <a className='link' target="_blank" rel="noopener noreferrer" href="https://twitter.com/FawazBayureksa" >
+                                <i className="fab fa-twitter icon"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div className='bg-section-one'>
+                <div className='bg-section-one' style={{
+                    animation: 'fadeInRight 1.2s ease-out',
+                    animationFillMode: 'both',
+                    animationDelay: '0.3s'
+                }}>
                     <img className='ml-0' src={Astronot1} alt='astronot' />
                 </div>
             </section>
