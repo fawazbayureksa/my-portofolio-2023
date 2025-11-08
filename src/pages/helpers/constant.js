@@ -102,6 +102,24 @@ export const projects = [
         name: 'Marketing System-Singa Fintech',
         description :' A comprehensive system aimed at boosting revenue by engaging old users through targeted offers and attracting new customers with enticing promotions.',
         image: 'marketing_landing.png',
-        url:null
+        url:null,
+    },
+    {
+        name: 'OmniCare - Multi-Tenant Customer Service Platform',
+        description: 'Enterprise-grade customer service application with advanced multi-tenant architecture supporting different countries and regions. Built with modern web technologies to handle complex ticketing workflows and customer interactions at scale.',
+        image: 'omnicare_login.png',
+        url: null,
+    },
+    {
+        name: 'OmniCare - Ticket Management System',
+        description: 'Comprehensive ticket management dashboard with advanced filtering, SLA tracking, risk level assessment, and multi-channel support. Features real-time status updates and intelligent routing across different tenant organizations.',
+        image: 'omnicare_tickets.png',
+        url: null,
+    },
+    {
+        name: 'OmniCare - Inbox & Communication Hub',
+        description: 'Unified inbox system for managing customer communications across multiple channels. Includes smart filtering, status tracking, and seamless integration with ticketing system for different tenant departments and countries.',
+        image: 'omnicare_inbox.png',
+        url: null,
     },
 ]

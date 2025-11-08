@@ -265,47 +265,72 @@ const Home = () => {
                 </AnimationOnScroll>
             </section>
             <section className='section-three ml-3' id='project'>
-            {/* <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}> */}
-                <hr className='line' />
-                <h3 className='text-h3-bold text-center'>My Recent Work</h3>
-                {/* <div className="image-gallery"> */}
-                    {/* {projects.map(item => (
-                        <img key={item.id} className="image-wrapper" src={require(`../assets/projects/${item.image}`)} alt={item.name}  />
-                    ))} */}
-                    
-                {/* </div> */}
-                <Carousel
-                    swipeable={true}
-                    draggable={false}
-                    responsive={responsiveProjects}
-                    showDots={false}
-                    infinite={true}
-                    autoPlay={true}
-                    autoPlaySpeed={1500}
-                    showArrows={true}
-                    // keyBoardControl={true}
-                    customTransition="all.1"
-                    transitionDuration={100}
-                    // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-                >
-                    {projects.map((item,index) => (
-                        <div className='card-projects mb-3' key={index}>
-                            <img src={require(`../assets/projects/${item.image}`)} alt={item.name}  />
-                            <div className="description">
-                                <h5>{item.name}</h5>
-                                <p>{item.description}</p>
-                                {item.url ? 
-                                    <a className='link-url' target='_blank' rel="noopener noreferrer" href={item.url}>View Project</a> 
-                                    : 
-                                    null
-                                }
-                            </div>
+                <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+                    <hr className='line' />
+                    <div className='text-center mb-4'>
+                        <h3 className='text-h3-bold'>Featured Projects</h3>
+                        <p className='text-muted mt-2' style={{fontSize: '1.1rem', maxWidth: '700px', margin: '10px auto'}}>
+                            Showcasing enterprise-level solutions built with modern technologies
+                        </p>
+                        <div className='d-flex justify-content-center align-items-center mt-3'>
+                            <span style={{backgroundColor: '#F4CE14', padding: '8px 20px', borderRadius: '20px', fontWeight: 'bold', fontSize: '0.9rem'}}>
+                                <i className="fas fa-briefcase mr-2"></i>
+                                6+ Professional Projects Delivered
+                            </span>
                         </div>
-                    ))}
-                </Carousel>
-
-
-            {/* </AnimationOnScroll> */}
+                    </div>
+                    
+                    <Carousel
+                        swipeable={true}
+                        draggable={false}
+                        responsive={responsiveProjects}
+                        showDots={true}
+                        infinite={true}
+                        autoPlay={true}
+                        autoPlaySpeed={3000}
+                        showArrows={true}
+                        customTransition="transform 500ms ease-in-out"
+                        transitionDuration={500}
+                    >
+                        {projects.map((item, index) => (
+                            <div className='card-projects mb-3' key={index} style={{position: 'relative', overflow: 'hidden', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.3)'}}>
+                                <div style={{position: 'absolute', top: '15px', left: '15px', zIndex: 10}}>
+                                    <span style={{backgroundColor: 'rgba(244, 206, 20, 0.9)', padding: '5px 15px', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', color: '#000'}}>
+                                        Image #{index + 1}
+                                    </span>
+                                </div>
+                                <img 
+                                    src={require(`../assets/projects/${item.image}`)} 
+                                    alt={item.name} 
+                                    style={{transition: 'transform 0.3s ease', width: '100%', height: 'auto'}}
+                                    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                                    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                                />
+                                <div className="description" style={{background: 'linear-gradient(135deg, rgba(44, 41, 41, 0.95) 0%, rgba(40,40,40,0.95) 100%)'}}>
+                                    <h5 style={{color: '#F4CE14', marginBottom: '10px', fontSize: '1.3rem', fontWeight: 'bold'}}>{item.name}</h5>
+                                    <p style={{marginBottom: '15px', lineHeight: '1.6', color: '#ddd'}}>{item.description}</p>
+                                    <div className='d-flex align-items-center justify-content-between'>
+                                        {item.url ? 
+                                            <a className='link-url' target='_blank' rel="noopener noreferrer" href={item.url} style={{backgroundColor: '#F4CE14', color: '#000', padding: '10px 20px', borderRadius: '25px', textDecoration: 'none', fontWeight: 'bold', transition: 'all 0.3s ease'}}>
+                                                <i className="fas fa-external-link-alt mr-2"></i>
+                                                View Live Project
+                                            </a> 
+                                            : 
+                                            <span style={{backgroundColor: 'rgba(255,255,255,0.1)', color: '#aaa', padding: '10px 20px', borderRadius: '25px', fontSize: '0.9rem'}}>
+                                                <i className="fas fa-lock mr-2"></i>
+                                                Confidential Project
+                                            </span>
+                                        }
+                                        <div style={{display: 'flex', gap: '10px'}}>
+                                            <i className="fas fa-code" style={{color: '#F4CE14', fontSize: '1.2rem'}} title="Production Ready"></i>
+                                            <i className="fas fa-check-circle" style={{color: '#4CAF50', fontSize: '1.2rem'}} title="Completed"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </Carousel>
+                </AnimationOnScroll>
             </section>
             <section className='' id='skill'>
                 <hr className='line' />
