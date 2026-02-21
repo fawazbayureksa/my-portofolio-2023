@@ -60,13 +60,13 @@ const Home = () => {
                     <div style={{marginBottom: '10px'}}>
                         <div className='d-flex' style={{gap: '10px', flexWrap: 'wrap'}}>
                         <span style={{
-                                backgroundColor: 'rgba(244, 206, 20, 0.15)',
-                                border: '2px solid #F4CE14',
+                                backgroundColor: 'rgba(177, 205, 131, 0.15)',
+                                border: '2px solid #b1cd83',
                                 padding: '8px 20px',
                                 borderRadius: '25px',
                                 fontSize: '0.9rem',
                                 fontWeight: 'bold',
-                                color: '#F4CE14',
+                                color: '#b1cd83',
                                 display: 'inline-block',
                                 animation: 'pulse 2s infinite'
                             }}>
@@ -74,13 +74,13 @@ const Home = () => {
                                 Full Stack Developer
                             </span>
                         <span style={{
-                                backgroundColor: 'rgba(244, 206, 20, 0.15)',
-                                border: '2px solid #F4CE14',
+                                backgroundColor: 'rgba(177, 205, 131, 0.15)',
+                                border: '2px solid #b1cd83',
                                 padding: '8px 20px',
                                 borderRadius: '25px',
                                 fontSize: '0.9rem',
                                 fontWeight: 'bold',
-                                color: '#F4CE14',
+                                color: '#b1cd83',
                                 display: 'inline-block',
                                 animation: 'pulse 2s infinite'
                             }}>
@@ -88,13 +88,13 @@ const Home = () => {
                                 Software Developer
                             </span>
                         <span style={{
-                                backgroundColor: 'rgba(244, 206, 20, 0.15)',
-                                border: '2px solid #F4CE14',
+                                backgroundColor: 'rgba(177, 205, 131, 0.15)',
+                                border: '2px solid #b1cd83',
                                 padding: '8px 20px',
                                 borderRadius: '25px',
                                 fontSize: '0.9rem',
                                 fontWeight: 'bold',
-                                color: '#F4CE14',
+                                color: '#b1cd83',
                                 display: 'inline-block',
                                 animation: 'pulse 2s infinite'
                             }}>
@@ -105,7 +105,7 @@ const Home = () => {
                         </div>
                         <h1 className='text-h1-bold' style={{marginTop: '20px'}}>Hello! I'm</h1>
                         <h1 className='text-h1-bold' style={{
-                            background: 'linear-gradient(135deg, #F4CE14 0%, #FFF 50%, #F4CE14 100%)',
+                            background: '#b1cd83',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
                             backgroundClip: 'text',
@@ -113,7 +113,7 @@ const Home = () => {
                             marginBottom: '15px'
                         }}>Fawwaz Bayureksa</h1>
                         <h3 className='text-h3' style={{marginBottom: '20px'}}>
-                            Building <span style={{color: '#F4CE14', fontWeight: 'bold'}}>enterprise-level</span> web & mobile applications
+                            Building <span style={{color: '#b1cd83', fontWeight: 'bold'}}>enterprise-level</span> web & mobile applications
                         </h3>
                         
                         <div style={{
@@ -126,27 +126,27 @@ const Home = () => {
                                 backgroundColor: 'rgba(255,255,255,0.05)',
                                 padding: '10px 15px',
                                 borderRadius: '10px',
-                                border: '1px solid rgba(244, 206, 20, 0.3)'
+                                border: '1px solid rgba(177, 205, 131, 0.3)'
                             }}>
-                                <i className="fas fa-briefcase" style={{color: '#F4CE14', marginRight: '8px'}}></i>
+                                <i className="fas fa-briefcase" style={{color: '#b1cd83', marginRight: '8px'}}></i>
                                 <span style={{fontSize: '0.95rem'}}>4+ Years Experience</span>
                             </div>
                             <div style={{
                                 backgroundColor: 'rgba(255,255,255,0.05)',
                                 padding: '10px 15px',
                                 borderRadius: '10px',
-                                border: '1px solid rgba(244, 206, 20, 0.3)'
+                                border: '1px solid rgba(177, 205, 131, 0.3)'
                             }}>
-                                <i className="fas fa-project-diagram" style={{color: '#F4CE14', marginRight: '8px'}}></i>
+                                <i className="fas fa-project-diagram" style={{color: '#b1cd83', marginRight: '8px'}}></i>
                                 <span style={{fontSize: '0.95rem'}}>6+ Projects Delivered</span>
                             </div>
                             <div style={{
                                 backgroundColor: 'rgba(255,255,255,0.05)',
                                 padding: '10px 15px',
                                 borderRadius: '10px',
-                                border: '1px solid rgba(244, 206, 20, 0.3)'
+                                border: '1px solid rgba(177, 205, 131, 0.3)'
                             }}>
-                                <i className="fas fa-building" style={{color: '#F4CE14', marginRight: '8px'}}></i>
+                                <i className="fas fa-building" style={{color: '#b1cd83', marginRight: '8px'}}></i>
                                 <span style={{fontSize: '0.95rem'}}>Digital Industry</span>
                             </div>
                         </div>
@@ -154,12 +154,12 @@ const Home = () => {
                         <p style={{
                             fontSize: '1.05rem',
                             marginBottom: '25px',
-                            color: '#ddd',
+                            color: '#333',
                             maxWidth: '600px',
                             lineHeight: '1.6'
                         }}>
-                            Specialized in <strong style={{color: '#F4CE14'}}> Javascript, PHP, React.js, React Native, Laravel</strong>. 
-                            Currently start to learn how to be good at <strong style={{color: '#F4CE14'}}>Golang</strong>
+                            Specialized in <strong style={{color: '#b1cd83'}}> Javascript, PHP, React.js, React Native, Laravel</strong>. 
+                            Currently start to learn how to be good at <strong style={{color: '#b1cd83'}}>Golang</strong>
                         </p>
 
                         <div className='d-flex align-items-center py-3'>
@@ -210,7 +210,7 @@ const Home = () => {
                     <div className='col-md-6 mt-5'>
                         <h3 className='text-h3-bold'>Who am i?</h3>
                         <p className='text-justify text-about'>
-                            I'm a passionate Software Developer create web and mobile applications. I hold an Associate's degree in Informatics Management and currently leverage my skills in the fast-paced Fintech industry. While I'm based in <span style={{ color: "#F4CE14" }}>Jakarta & Makassar, Indonesia</span>, I'm a quick learner, highly adaptable, and excited by the prospect of new challenges anywhere.
+                            I'm a passionate Software Developer create web and mobile applications. I hold an Associate's degree in Informatics Management and currently leverage my skills in the fast-paced Fintech industry. While I'm based in <span style={{ color: "#b1cd83" }}>Jakarta & Makassar, Indonesia</span>, I'm a quick learner, highly adaptable, and excited by the prospect of new challenges anywhere.
                         </p>
                     </div>
                 </div>
@@ -388,11 +388,11 @@ const Home = () => {
                     <hr className='line' />
                     <div className='text-center mb-4'>
                         <h3 className='text-h3-bold'>Featured Projects</h3>
-                        <p className='text-muted mt-2' style={{fontSize: '1.1rem', maxWidth: '700px', margin: '10px auto'}}>
+                        <p className='mt-2' style={{fontSize: '1.1rem', maxWidth: '700px', margin: '10px auto'}}>
                             Showcasing enterprise-level solutions built with modern technologies
                         </p>
                         <div className='d-flex justify-content-center align-items-center mt-3'>
-                            <span style={{backgroundColor: '#F4CE14', padding: '8px 20px', borderRadius: '20px', fontWeight: 'bold', fontSize: '0.9rem'}}>
+                            <span style={{backgroundColor: '#b1cd83', padding: '8px 20px', borderRadius: '20px', fontWeight: 'bold', fontSize: '0.9rem'}}>
                                 <i className="fas fa-briefcase mr-2"></i>
                                 6+ Professional Projects Delivered
                             </span>
@@ -414,7 +414,7 @@ const Home = () => {
                         {projects.map((item, index) => (
                             <div className='card-projects mb-3' key={index} style={{position: 'relative', overflow: 'hidden', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.3)'}}>
                                 <div style={{position: 'absolute', top: '15px', left: '15px', zIndex: 10}}>
-                                    <span style={{backgroundColor: 'rgba(244, 206, 20, 0.9)', padding: '5px 15px', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', color: '#000'}}>
+                                    <span style={{backgroundColor: 'rgba(177, 205, 131, 0.9)', padding: '5px 15px', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', color: '#000'}}>
                                         Image #{index + 1}
                                     </span>
                                 </div>
@@ -426,22 +426,22 @@ const Home = () => {
                                     onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
                                 />
                                 <div className="description" style={{background: 'linear-gradient(135deg, rgba(44, 41, 41, 0.95) 0%, rgba(40,40,40,0.95) 100%)'}}>
-                                    <h5 style={{color: '#F4CE14', marginBottom: '10px', fontSize: '1.3rem', fontWeight: 'bold'}}>{item.name}</h5>
-                                    <p style={{marginBottom: '15px', lineHeight: '1.6', color: '#ddd'}}>{item.description}</p>
+                                    <h5 style={{color: '#b1cd83', marginBottom: '10px', fontSize: '1.3rem', fontWeight: 'bold'}}>{item.name}</h5>
+                                <p style={{marginBottom: '15px', lineHeight: '1.6', color: '#fff'}}>{item.description}</p>
                                     <div className='d-flex align-items-center justify-content-between'>
                                         {item.url ? 
-                                            <a className='link-url' target='_blank' rel="noopener noreferrer" href={item.url} style={{backgroundColor: '#F4CE14', color: '#000', padding: '10px 20px', borderRadius: '25px', textDecoration: 'none', fontWeight: 'bold', transition: 'all 0.3s ease'}}>
+                                            <a className='link-url' target='_blank' rel="noopener noreferrer" href={item.url} style={{backgroundColor: '#b1cd83', color: '#000', padding: '10px 20px', borderRadius: '25px', textDecoration: 'none', fontWeight: 'bold', transition: 'all 0.3s ease'}}>
                                                 <i className="fas fa-external-link-alt mr-2"></i>
                                                 View Live Project
                                             </a> 
                                             : 
-                                            <span style={{backgroundColor: 'rgba(255,255,255,0.1)', color: '#aaa', padding: '10px 20px', borderRadius: '25px', fontSize: '0.9rem'}}>
+                                            <span style={{backgroundColor: 'rgba(51,51,51,0.1)', color: '#fff', padding: '10px 20px', borderRadius: '25px', fontSize: '0.9rem'}}>
                                                 <i className="fas fa-lock mr-2"></i>
                                                 Confidential Project
                                             </span>
                                         }
                                         <div style={{display: 'flex', gap: '10px'}}>
-                                            <i className="fas fa-code" style={{color: '#F4CE14', fontSize: '1.2rem'}} title="Production Ready"></i>
+                                            <i className="fas fa-code" style={{color: '#b1cd83', fontSize: '1.2rem'}} title="Production Ready"></i>
                                             <i className="fas fa-check-circle" style={{color: '#4CAF50', fontSize: '1.2rem'}} title="Completed"></i>
                                         </div>
                                     </div>
@@ -481,11 +481,11 @@ const Home = () => {
                     <div className='col-md-6'>
                         <div className='d-flex mt-3'>
                             <i className="far fa-envelope mr-1"></i>
-                            <a className='cursor-pointer text-decoration-none text-white' target='_blank' rel="noopener noreferrer" href="mailto:fawwazbayureksa@gmail.com"><h6 className='font-weight-bold'>fawwazbayureksa@gmail.com</h6></a>
+                            <a className='cursor-pointer text-decoration-none text-dark' target='_blank' rel="noopener noreferrer" href="mailto:fawwazbayureksa@gmail.com"><h6 className='font-weight-bold'>fawwazbayureksa@gmail.com</h6></a>
                         </div>
                         <div className='d-flex mt-3'>
                             <i className="fas fa-phone-alt mr-1"></i>
-                            <a className='cursor-pointer text-decoration-none text-white' target='_blank' rel="noopener noreferrer" href="https://wa.me/+6282394418669"> <h6 className='font-weight-bold'>+6282394418669</h6></a>
+                            <a className='cursor-pointer text-decoration-none text-dark' target='_blank' rel="noopener noreferrer" href="https://wa.me/+6282394418669"> <h6 className='font-weight-bold'>+6282394418669</h6></a>
                         </div>
                         <div className='d-flex mt-3'>
                             <i className="fas fa-map-marker-alt mr-1"></i>
