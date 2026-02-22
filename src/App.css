@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap');
 
 :root {
-  --primary-color: #164863;
+  --primary-color: #d4a373;
   /* Ganti dengan nilai warna yang diinginkan */
-  --secondary-color: #427D9D;
-  --accent-color: #FF8F8F;
-  --third-color: #9BBEC8;
-  --fourth-color: #DDF2FD;
+  --secondary-color: #e6ccb2;
+  --accent-color: #bc8a5f;
+  --third-color: #b5835a;
+  --fourth-color: #ede0d4;
   --text-color-dark: #333;
   --text-color-white: #fff;
 }
@@ -40,11 +40,11 @@
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(244, 206, 20, 0.7);
+    box-shadow: 0 0 0 0 rgba(212, 163, 115, 0.7);
   }
   50% {
     transform: scale(1.05);
-    box-shadow: 0 0 20px 5px rgba(244, 206, 20, 0.3);
+    box-shadow: 0 0 20px 5px rgba(212, 163, 115, 0.3);
   }
 }
 
@@ -106,7 +106,7 @@ header .logo {
 }
 
 header nav a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   /* margin-left: 20px; */
 }
@@ -163,8 +163,8 @@ header nav a {
 }
 
 .bg-content {
-  color: #ffffff;
-  background: linear-gradient(147deg, #00D8B2 0%, var(--primary-color) 0%, var(--secondary-color) 99%);
+  color: #333;
+  background: #faf6f0;
   height: "100%";
 }
 
@@ -173,13 +173,13 @@ nav a {
   display: inline-block;
   padding: 10px 20px;
   text-decoration: none;
-  color: #ffffff;
+  color: #d4a373;
   transition: all 0.2s;
 }
 
 nav a:hover,
 nav a:focus {
-  color: var(--text-color-white);
+  color: #333;
   text-decoration: none;
 }
 
@@ -190,7 +190,7 @@ nav a::before {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #ffffff;
+  background-color: #d4a373;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.2s;
@@ -254,14 +254,14 @@ nav a:focus::before {
 .text-about {
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--text-color-white);
+  color: #333;
   line-height: 1.8;
 }
 
 .line {
   height: 2px;
   width: 100%;
-  border-bottom: 5px solid rgb(255, 255, 255);
+  border-bottom: 5px solid #d4a373;
 }
 
 .icon {
@@ -299,7 +299,7 @@ nav a:focus::before {
   padding: 10px 20px;
   color: white;
   font-size: 20px;
-  background-color: var(--accent-color);
+  background-color: var(--primary-color);
   border: none;
   transition: background-color, color 0.5s;
   text-decoration: none;
@@ -307,13 +307,13 @@ nav a:focus::before {
 
 .button:hover,
 .button:focus {
-  background-color: #ffffff;
+  background-color: #d4a373;
   color: var(--primary-color);
   text-decoration: none;
 }
 
 .link {
-  color: #ffffff;
+  color: #d4a373;
 }
 
 .icon:hover,
@@ -351,13 +351,13 @@ nav a:focus::before {
   margin-bottom: 0;
 }
 
-.card-education:hover {
-  background-color: var(--fourth-color);
+/* .card-education:hover {
+  background-color: var(--secondary-color);
 }
 
 .card-education:hover small {
   color: var(--primary-color) !important;
-}
+} */
 
 .card-skills {
   background-color: rgb(255, 255, 255);
@@ -383,14 +383,15 @@ nav a:focus::before {
 }
 
 .card-skills:hover {
-  background-color: var(--fourth-color);
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out;
 }
 
 #scroll-on-top-button {
   position: fixed;
   bottom: 16px;
   right: 16px;
-  color: #fff;
+  color: #333;
   border: none;
   border-radius: 10px;
   font-size: 20px;
@@ -425,7 +426,7 @@ nav a:focus::before {
     color: white;
     font-size: 15px;
     border-radius: 10px;
-    background-color: #e0c816;
+    background-color: #d4a373;
     border: none;
     transition: background-color, color 0.5s;
     text-decoration: none;
@@ -595,7 +596,7 @@ nav a:focus::before {
 }
 
 .card-projects:hover {
-  background-color: var(--fourth-color);
+  background-color: var(--secondary-color);
 }
 .card-projects:hover .description {
   opacity: 1; /* Show on hover */
