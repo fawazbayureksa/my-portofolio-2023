@@ -59,6 +59,26 @@ export const skill = [
         name: 'Firebase',
         logo: 'firebase-new.png'
     },
+    {
+        name:'Supabase',
+        logo:'Supabase.png'
+    },
+    {
+        name:'Google Cloud Platform',
+        logo:'gcp.svg'
+    },
+    {
+        name:'Claude',
+        logo:'claude.png'
+    },
+    {
+        name:'ChatGPT',
+        logo:'gpt.png'
+    },
+     {
+        name:'Git Co-Pilot',
+        logo:'git-copilot.png'
+     }
 ]
 
 export const projects = [
@@ -122,4 +142,34 @@ export const projects = [
         image: 'omnicare_inbox.png',
         url: null,
     },
+    {
+        name: 'Omnicare - Live Chat Support',
+        description: 'Real-time live chat support interface with intelligent routing and multi-tenant capabilities. Provides seamless communication between customers and support agents across different regions and departments.',
+        image: 'omnicare_live_chat.png',
+        url: null,
+    },
+    {
+        name:'Omnicare - Call Center Dashboard',
+        description:'Comprehensive call center dashboard with real-time call monitoring, intelligent routing, and multi-tenant support. Provides insights into call metrics and agent performance across different tenant organizations.',
+        image:'omnicare_call.png',
+        url:null,
+    },
+    {
+        name:'Omnicare - App Review & Customer Satisfaction Dashboard',
+        description:'Advanced dashboard for monitoring app reviews and customer satisfaction metrics. Features sentiment analysis, review filtering, and multi-tenant support for different regions and departments.',
+        image:'omnicare_app_review.png',
+        url:null,
+    },
+    {
+        name: 'MyMoneyManage - Personal Finance Management App Ios & Android & Web',
+        description: 'A sleek and intuitive personal finance management application designed to help users track their expenses, set budgets, and achieve their financial goals. Built with modern web technologies for a seamless user experience.',
+        image: 'money_manage_home_ios.png',
+        url: null,
+    },
+    {
+        name: 'MyMoneyManage - Expense Tracking Dashboard',
+        description: 'A comprehensive dashboard for tracking and categorizing expenses, providing users with insights into their spending habits. Features interactive charts, budget tracking, and personalized financial recommendations.',
+        image: 'money_manage_home.png',
+        url: null,
+    }
 ]

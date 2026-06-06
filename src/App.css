@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap');
 
 :root {
-  --primary-color: #d4a373;
-  /* Ganti dengan nilai warna yang diinginkan */
-  --secondary-color: #e6ccb2;
-  --accent-color: #bc8a5f;
-  --third-color: #b5835a;
-  --fourth-color: #ede0d4;
-  --text-color-dark: #333;
-  --text-color-white: #fff;
+  --primary-color: #3b82f6;
+  --secondary-color: #60a5fa;
+  --accent-color: #06b6d4;
+  --third-color: #1e40af;
+  --fourth-color: #eff6ff;
+
+  --text-color-dark: #0f172a;
+  --text-color-white: #ffffff;
 }
 
+/* :root { --primary-color: #d48483; Ganti dengan nilai warna yang diinginkan --secondary-color: #e6ccb2; --accent-color: #bc8a5f; --third-color: #b5835a; --fourth-color: #ede0d4; --text-color-dark: #333; --text-color-white: #fff; } */
 
 /* Animasi */
 @keyframes cursor-animation {
@@ -163,8 +164,8 @@ header nav a {
 }
 
 .bg-content {
-  color: #333;
-  background: #faf6f0;
+  color: var(--text-color-dark);
+  background: var(--fourth-color);
   height: "100%";
 }
 
@@ -190,7 +191,7 @@ nav a::before {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #d4a373;
+  background-color: var(--primary-color);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.2s;
@@ -261,7 +262,7 @@ nav a:focus::before {
 .line {
   height: 2px;
   width: 100%;
-  border-bottom: 5px solid #d4a373;
+  border-bottom: 5px solid var(--primary-color);
 }
 
 .icon {
@@ -307,13 +308,13 @@ nav a:focus::before {
 
 .button:hover,
 .button:focus {
-  background-color: #d4a373;
+  background-color: var(--secondary-color);
   color: var(--primary-color);
   text-decoration: none;
 }
 
 .link {
-  color: #d4a373;
+  color: var(--primary-color);
 }
 
 .icon:hover,
@@ -391,7 +392,7 @@ nav a:focus::before {
   position: fixed;
   bottom: 16px;
   right: 16px;
-  color: #333;
+  color: var(--text-color-white);
   border: none;
   border-radius: 10px;
   font-size: 20px;
@@ -426,7 +427,7 @@ nav a:focus::before {
     color: white;
     font-size: 15px;
     border-radius: 10px;
-    background-color: #d4a373;
+    background-color: var(--primary-color);
     border: none;
     transition: background-color, color 0.5s;
     text-decoration: none;
