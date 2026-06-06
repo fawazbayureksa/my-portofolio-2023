@@ -4,10 +4,19 @@ import { projects, skill } from './helpers/constant'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import myPict from '../assets/pict_12_24.jpg';
+import myPict from '../assets/pict_02_26.JPG';
 import Astronot1 from '../assets/astronot.png';
 import Astronot2 from '../assets/astronot2.png';
 import Astronot3 from '../assets/astronot3.png';
+
+const primaryColor = '#3b82f6';     // Terracotta modern
+const secondaryColor = '#60a5fa';   // Soft sand
+const accentColor = '#06b6d4';      // Rich brown
+const thirdColor = '#1e40af';       // Warm caramel
+const fourthColor = '#eff6ff';      // Off-white
+
+const textColorDark = '#0f172a';
+const textColorWhite = '#ffffff';
 
 // --- Data Constants ---
 const ROLES = [
@@ -17,8 +26,8 @@ const ROLES = [
 ];
 
 const STATS = [
-    { icon: 'fas fa-briefcase', label: '4+ Years Experience' },
-    { icon: 'fas fa-project-diagram', label: '6+ Projects Delivered' },
+    { icon: 'fas fa-briefcase', label: '5 Years Experience' },
+    { icon: 'fas fa-project-diagram', label: '7+ Projects Delivered' },
     { icon: 'fas fa-building', label: 'Digital Industry' }
 ];
 
@@ -42,13 +51,13 @@ const EXPERIENCE_HISTORY = [
 // --- Subcomponents ---
 const RoleBadge = ({ icon, label }) => (
     <span style={{
-        backgroundColor: 'rgba(212, 163, 115, 0.15)',
-        border: '2px solid #d4a373',
+        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+        border: '2px solid' + primaryColor,
         padding: '8px 20px',
         borderRadius: '25px',
         fontSize: '0.9rem',
         fontWeight: 'bold',
-        color: '#d4a373',
+        color: primaryColor,
         display: 'inline-block',
         animation: 'pulse 2s infinite'
     }}>
@@ -59,12 +68,12 @@ const RoleBadge = ({ icon, label }) => (
 
 const StatCard = ({ icon, label }) => (
     <div style={{
-        backgroundColor: 'rgba(255,255,255,0.05)',
+        backgroundColor: textColorWhite,
         padding: '10px 15px',
         borderRadius: '10px',
-        border: '1px solid rgba(212, 163, 115, 0.3)'
+        border: '1px solid ' + primaryColor,
     }}>
-        <i className={icon} style={{ color: '#d4a373', marginRight: '8px' }}></i>
+        <i className={icon} style={{ color: primaryColor, marginRight: '8px' }}></i>
         <span style={{ fontSize: '0.95rem' }}>{label}</span>
     </div>
 );
@@ -112,7 +121,7 @@ const Home = () => {
                     
                     <h1 className='text-h1-bold' style={{ marginTop: '20px' }}>Hello! I'm</h1>
                     <h1 className='text-h1-bold' style={{
-                        background: '#d4a373',
+                        background: primaryColor,
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
@@ -121,7 +130,7 @@ const Home = () => {
                     }}>Fawwaz Bayureksa</h1>
                     
                     <h3 className='text-h3' style={{ marginBottom: '20px' }}>
-                        Building <span style={{ color: '#d4a373', fontWeight: 'bold' }}>enterprise-level</span> web & mobile applications
+                        Building <span style={{ color: primaryColor, fontWeight: 'bold' }}>enterprise-level</span> web & mobile applications
                     </h3>
                     
                     <div style={{ display: 'flex', gap: '15px', marginBottom: '25px', flexWrap: 'wrap' }}>
@@ -129,8 +138,8 @@ const Home = () => {
                     </div>
 
                     <p style={{ fontSize: '1.05rem', marginBottom: '25px', color: '#333', maxWidth: '600px', lineHeight: '1.6' }}>
-                        Specialized in <strong style={{ color: '#d4a373' }}> Javascript, PHP, React.js, React Native, Laravel</strong>. 
-                        Currently start to learn how to be good at <strong style={{ color: '#d4a373' }}>Golang</strong>
+                        Specialized in <strong style={{ color: primaryColor }}> Javascript, PHP, React.js, React Native, Laravel</strong>. 
+                        Currently start to learn how to be good at <strong style={{ color: accentColor }}>Golang</strong>
                     </p>
 
                     <div className='d-flex align-items-center py-3'>
@@ -166,7 +175,7 @@ const Home = () => {
                     <div className='col-md-6 mt-5'>
                         <h3 className='text-h3-bold'>Who am i?</h3>
                         <p className='text-justify text-about'>
-                            I'm a passionate Software Developer create web and mobile applications. I hold an Associate's degree in Informatics Management and currently leverage my skills in the fast-paced Fintech industry. While I'm based in <span style={{ color: "#d4a373" }}>Jakarta & Makassar, Indonesia</span>, I'm a quick learner, highly adaptable, and excited by the prospect of new challenges anywhere.
+                            I'm a passionate Software Developer create web and mobile applications. I hold an Associate's degree in Informatics Management and currently leverage my skills in the fast-paced Fintech industry. While I'm based in <span style={{ color: primaryColor }}>Jakarta & Makassar, Indonesia</span>, I'm a quick learner, highly adaptable, and excited by the prospect of new challenges anywhere.
                         </p>
                     </div>
                 </div>
@@ -246,9 +255,9 @@ const Home = () => {
                             Showcasing enterprise-level solutions built with modern technologies
                         </p>
                         <div className='d-flex justify-content-center align-items-center mt-3'>
-                            <span style={{ backgroundColor: '#d4a373', padding: '8px 20px', borderRadius: '20px', fontWeight: 'bold', fontSize: '0.9rem' }}>
+                            <span style={{ color: textColorWhite, backgroundColor: primaryColor, padding: '8px 20px', borderRadius: '20px', fontWeight: 'bold', fontSize: '0.9rem' }}>
                                 <i className="fas fa-briefcase mr-2"></i>
-                                6+ Professional Projects Delivered
+                                7+ Professional Projects Delivered
                             </span>
                         </div>
                     </div>
@@ -268,7 +277,7 @@ const Home = () => {
                         {projects.map((item, index) => (
                             <div className='card-projects mb-3' key={index} style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
                                 <div style={{ position: 'absolute', top: '15px', left: '15px', zIndex: 10 }}>
-                                    <span style={{ backgroundColor: 'rgba(212, 163, 115, 0.9)', padding: '5px 15px', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', color: '#000' }}>
+                                    <span style={{ backgroundColor: primaryColor, padding: '5px 15px', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', color: textColorWhite }}>
                                         Image #{index + 1}
                                     </span>
                                 </div>
@@ -280,22 +289,22 @@ const Home = () => {
                                     onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
                                 />
                                 <div className="description" style={{ background: 'linear-gradient(135deg, rgba(44, 41, 41, 0.95) 0%, rgba(40,40,40,0.95) 100%)' }}>
-                                    <h5 style={{ color: '#d4a373', marginBottom: '10px', fontSize: '1.3rem', fontWeight: 'bold' }}>{item.name}</h5>
-                                    <p style={{ marginBottom: '15px', lineHeight: '1.6', color: '#fff' }}>{item.description}</p>
+                                    <h5 style={{ color: primaryColor, marginBottom: '10px', fontSize: '1.3rem', fontWeight: 'bold' }}>{item.name}</h5>
+                                    <p style={{ marginBottom: '15px', lineHeight: '1.6', color: textColorWhite }}>{item.description}</p>
                                     <div className='d-flex align-items-center justify-content-between'>
                                         {item.url ? 
-                                            <a className='link-url' target='_blank' rel="noopener noreferrer" href={item.url} style={{ backgroundColor: '#d4a373', color: '#000', padding: '10px 20px', borderRadius: '25px', textDecoration: 'none', fontWeight: 'bold', transition: 'all 0.3s ease' }}>
+                                            <a className='link-url' target='_blank' rel="noopener noreferrer" href={item.url} style={{ backgroundColor: primaryColor, color: textColorWhite, padding: '10px 20px', borderRadius: '25px', textDecoration: 'none', fontWeight: 'bold', transition: 'all 0.3s ease' }}>
                                                 <i className="fas fa-external-link-alt mr-2"></i>
                                                 View Live Project
                                             </a> 
                                             : 
-                                            <span style={{ backgroundColor: 'rgba(51,51,51,0.1)', color: '#fff', padding: '10px 20px', borderRadius: '25px', fontSize: '0.9rem' }}>
+                                            <span style={{ backgroundColor: 'rgba(51,51,51,0.1)', color: textColorWhite, padding: '10px 20px', borderRadius: '25px', fontSize: '0.9rem' }}>
                                                 <i className="fas fa-lock mr-2"></i>
                                                 Confidential Project
                                             </span>
                                         }
                                         <div style={{ display: 'flex', gap: '10px' }}>
-                                            <i className="fas fa-code" style={{ color: '#d4a373', fontSize: '1.2rem' }} title="Production Ready"></i>
+                                            <i className="fas fa-code" style={{ color: primaryColor, fontSize: '1.2rem' }} title="Production Ready"></i>
                                             <i className="fas fa-check-circle" style={{ color: '#4CAF50', fontSize: '1.2rem' }} title="Completed"></i>
                                         </div>
                                     </div>
