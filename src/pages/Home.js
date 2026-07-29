@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Template from '../components/Template';
-import { projects, skill } from './helpers/constant'
+import { projects, skill } from './helpers/constant';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -8,6 +8,8 @@ import myPict from '../assets/pict_02_26.JPG';
 import Astronot1 from '../assets/astronot.png';
 import Astronot2 from '../assets/astronot2.png';
 import Astronot3 from '../assets/astronot3.png';
+import { CareerTimeline } from '../components/CareerTimeline';
+import { animate, createScope, spring, createDraggable, stagger } from 'animejs';
 
 const primaryColor = '#3b82f6';     // Terracotta modern
 const secondaryColor = '#60a5fa';   // Soft sand
@@ -43,23 +45,19 @@ const EDUCATION_HISTORY = [
     { period: '2018-2021', major: 'Management informatics', school: 'POLITEKNIK LP3I MAKASSAR' }
 ];
 
-const EXPERIENCE_HISTORY = [
-    { period: 'April 2022 - December 2022', role: 'Front End Web & Mobile Developer', company: 'PT TEKINDO SOLUSI INDONESIA' },
-    { period: 'January 2023 - Present', role: 'Full Stack Developer', company: 'PT ABADI SEJAHTERA FINANSINDO' }
-];
-
 // --- Subcomponents ---
 const RoleBadge = ({ icon, label }) => (
-    <span style={{
+    <span className="role-badge-item" style={{
         backgroundColor: 'rgba(59, 130, 246, 0.1)',
-        border: '2px solid' + primaryColor,
+        border: '2px solid ' + primaryColor,
         padding: '8px 20px',
         borderRadius: '25px',
         fontSize: '0.9rem',
         fontWeight: 'bold',
         color: primaryColor,
         display: 'inline-block',
-        animation: 'pulse 2s infinite'
+        boxShadow: '0 4px 12px rgba(59, 130, 246, 0.15)',
+        cursor: 'default'
     }}>
         <i className={`${icon} mr-2`}></i>
         {label}
@@ -67,14 +65,16 @@ const RoleBadge = ({ icon, label }) => (
 );
 
 const StatCard = ({ icon, label }) => (
-    <div style={{
+    <div className="stat-card-item" style={{
         backgroundColor: textColorWhite,
-        padding: '10px 15px',
-        borderRadius: '10px',
+        padding: '10px 18px',
+        borderRadius: '12px',
         border: '1px solid ' + primaryColor,
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)',
+        cursor: 'default'
     }}>
         <i className={icon} style={{ color: primaryColor, marginRight: '8px' }}></i>
-        <span style={{ fontSize: '0.95rem' }}>{label}</span>
+        <span style={{ fontSize: '0.95rem', fontWeight: '600' }}>{label}</span>
     </div>
 );
 
@@ -94,6 +94,94 @@ const TimelineCard = ({ period, title, subtitle, icon }) => (
 );
 
 const Home = () => {
+    const root = useRef(null);
+    const scope = useRef(null);
+
+    useEffect(() => {
+        // Scoped Anime.js instances for smooth animations and automatic cleanup
+        scope.current = createScope({ root }).add(self => {
+            // Floating hero astronaut loop
+            animate('.astro-img', {
+                translateY: [-16, 16],
+                rotate: [-4, 4],
+                duration: 3200,
+                loop: true,
+                alternate: true,
+                ease: 'inOutSine'
+            });
+
+            // Floating education astronaut loop
+            animate('.astro-img-3', {
+                translateY: [-12, 12],
+                rotate: [3, -3],
+                duration: 2800,
+                loop: true,
+                alternate: true,
+                ease: 'inOutSine'
+            });
+
+            // Staggered role badges entrance
+            animate('.role-badge-item', {
+                scale: [0, 1],
+                opacity: [0, 1],
+                delay: stagger(120, { start: 100 }),
+                ease: spring({ bounce: 0.5 })
+            });
+
+            // Staggered stat cards entrance
+            animate('.stat-card-item', {
+                translateY: [35, 0],
+                opacity: [0, 1],
+                delay: stagger(120, { start: 350 }),
+                ease: 'out(4)',
+                duration: 800
+            });
+
+            // Staggered social links entrance
+            animate('.social-link-item', {
+                scale: [0, 1],
+                opacity: [0, 1],
+                delay: stagger(100, { start: 600 }),
+                ease: spring({ bounce: 0.6 })
+            });
+
+            // Hero main text entrance
+            animate('.hero-title-text', {
+                translateY: [30, 0],
+                opacity: [0, 1],
+                ease: 'out(4)',
+                duration: 900
+            });
+
+            // Interactive draggable astronaut with spring release physics
+            createDraggable('.astro-img', {
+                releaseEase: spring({ bounce: 0.6 })
+            });
+
+            createDraggable('.astro-img-3', {
+                releaseEase: spring({ bounce: 0.6 })
+            });
+
+            // Register interactive method to animate profile image on click
+            self.add('pulsePict', () => {
+                animate('.my-pict', {
+                    scale: [1, 1.12, 1],
+                    rotate: [0, 8, -8, 0],
+                    duration: 900,
+                    ease: spring({ bounce: 0.5 })
+                });
+            });
+        });
+
+        return () => scope.current && scope.current.revert();
+    }, []);
+
+    const handleProfileClick = () => {
+        if (scope.current && scope.current.methods && scope.current.methods.pulsePict) {
+            scope.current.methods.pulsePict();
+        }
+    };
+
     const responsive = {
         superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 8 },
         desktop: { breakpoint: { max: 3000, min: 1024 }, items: 6 },
@@ -109,272 +197,248 @@ const Home = () => {
     };
 
     return (
-        <Template>
-            {/* --- HERO SECTION --- */}
-            <section className="section-one ml-3" id='home'>
-                <div className='text-section-one' style={{ animation: 'fadeInUp 1s ease-out', animationFillMode: 'both' }}>
-                    <div style={{ marginBottom: '10px' }}>
-                        <div className='d-flex' style={{ gap: '10px', flexWrap: 'wrap' }}>
-                            {ROLES.map((role, idx) => <RoleBadge key={idx} icon={role.icon} label={role.label} />)}
+        <div ref={root}>
+            <Template>
+                {/* --- HERO SECTION --- */}
+                <section className="section-one ml-3" id='home'>
+                    <div className='text-section-one hero-title-text'>
+                        <div style={{ marginBottom: '10px' }}>
+                            <div className='d-flex' style={{ gap: '10px', flexWrap: 'wrap' }}>
+                                {ROLES.map((role, idx) => <RoleBadge key={idx} icon={role.icon} label={role.label} />)}
+                            </div>
                         </div>
-                    </div>
-                    
-                    <h1 className='text-h1-bold' style={{ marginTop: '20px' }}>Hello! I'm</h1>
-                    <h1 className='text-h1-bold' style={{
-                        background: primaryColor,
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        backgroundClip: 'text',
-                        fontSize: '3.5rem',
-                        marginBottom: '15px'
-                    }}>Fawwaz Bayureksa</h1>
-                    
-                    <h3 className='text-h3' style={{ marginBottom: '20px' }}>
-                        Building <span style={{ color: primaryColor, fontWeight: 'bold' }}>enterprise-level</span> web & mobile applications
-                    </h3>
-                    
-                    <div style={{ display: 'flex', gap: '15px', marginBottom: '25px', flexWrap: 'wrap' }}>
-                        {STATS.map((stat, idx) => <StatCard key={idx} icon={stat.icon} label={stat.label} />)}
-                    </div>
+                        
+                        <h1 className='text-h1-bold' style={{ marginTop: '20px' }}>Hello! I'm</h1>
+                        <h1 className='text-h1-bold' style={{
+                            background: primaryColor,
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text',
+                            fontSize: '3.5rem',
+                            marginBottom: '15px'
+                        }}>Fawwaz Bayureksa</h1>
+                        
+                        <h3 className='text-h3' style={{ marginBottom: '20px' }}>
+                            Building <span style={{ color: primaryColor, fontWeight: 'bold' }}>enterprise-level</span> web & mobile applications
+                        </h3>
+                        
+                        <div style={{ display: 'flex', gap: '15px', marginBottom: '25px', flexWrap: 'wrap' }}>
+                            {STATS.map((stat, idx) => <StatCard key={idx} icon={stat.icon} label={stat.label} />)}
+                        </div>
 
-                    <p style={{ fontSize: '1.05rem', marginBottom: '25px', color: '#333', maxWidth: '600px', lineHeight: '1.6' }}>
-                        Specialized in <strong style={{ color: primaryColor }}> Javascript, PHP, React.js, React Native, Laravel</strong>. 
-                        Currently start to learn how to be good at <strong style={{ color: accentColor }}>Golang</strong>
-                    </p>
+                        <p style={{ fontSize: '1.05rem', marginBottom: '25px', color: '#333', maxWidth: '600px', lineHeight: '1.6' }}>
+                            Specialized in <strong style={{ color: primaryColor }}> Javascript, PHP, React.js, React Native, Laravel</strong>. 
+                            Currently start to learn how to be good at <strong style={{ color: accentColor }}>Golang</strong>
+                        </p>
 
-                    <div className='d-flex align-items-center py-3'>
-                        <a target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/1D8qApdKCmkFB67Jsy3G5xjEHc9Ud1Bk_/view?usp=sharing' 
-                            className='button mr-3' 
-                            style={{ padding: '12px 30px', fontSize: '1rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
-                            <i className="fas fa-download"></i>
-                            Download CV
-                        </a>
-                        {SOCIAL_LINKS.map((link, idx) => (
-                            <a key={idx} className='link' target="_blank" rel="noopener noreferrer" href={link.href}>
-                                <i className={`${link.icon} icon`}></i>
+                        <div className='d-flex align-items-center py-3'>
+                            <a target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/1D8qApdKCmkFB67Jsy3G5xjEHc9Ud1Bk_/view?usp=sharing' 
+                                className='button mr-3' 
+                                style={{ padding: '12px 30px', fontSize: '1rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
+                                <i className="fas fa-download"></i>
+                                Download CV
                             </a>
-                        ))}
-                    </div>
-                </div>
-                
-                <div className='bg-section-one' style={{ animation: 'fadeInRight 1.2s ease-out', animationFillMode: 'both', animationDelay: '0.3s' }}>
-                    <img className='ml-0' src={Astronot1} alt='astronot' />
-                </div>
-            </section>
-
-            {/* --- ABOUT SECTION --- */}
-            <section className='section-two ml-3' id='about'>
-                <hr className='line' />
-                <h3 className='text-h3-bold text-center'>About Me</h3>
-                <div className='d-flex align-items-center' id='content-section-two'>
-                    <div className='col-md-6'>
-                        <div className='text-center'>
-                            <img src={myPict} className='my-pict' alt='my-pict' />
-                        </div>
-                    </div>
-                    <div className='col-md-6 mt-5'>
-                        <h3 className='text-h3-bold'>Who am i?</h3>
-                        <p className='text-justify text-about'>
-                            I'm a passionate Software Developer create web and mobile applications. I hold an Associate's degree in Informatics Management and currently leverage my skills in the fast-paced Fintech industry. While I'm based in <span style={{ color: primaryColor }}>Jakarta & Makassar, Indonesia</span>, I'm a quick learner, highly adaptable, and excited by the prospect of new challenges anywhere.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- EDUCATION SECTION --- */}
-            <section className='section-three ml-3' id='education'>
-                <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
-                    <hr className='line' />
-                    <h3 className='text-h3-bold text-center'>My Education</h3>
-                    
-                    {/* Desktop View */}
-                    <div className='d-flex align-items-center' id='content-section-three-desktop'>
-                        <div className='col-md-7 col-xs-12 col-sm-12'>
-                            {EDUCATION_HISTORY.map((edu, idx) => (
-                                <TimelineCard key={idx} period={edu.period} title={edu.major} subtitle={edu.school} icon="fa fa-school" />
+                            {SOCIAL_LINKS.map((link, idx) => (
+                                <a key={idx} className='link social-link-item' target="_blank" rel="noopener noreferrer" href={link.href}>
+                                    <i className={`${link.icon} icon`}></i>
+                                </a>
                             ))}
-                        </div>
-                        <div className='col-md-5 col-xs-12 col-sm-12 bg-section-two' id='section-astronot-3'>
-                            <img className='ml-0' src={Astronot3} alt='astronot' />
-                        </div>
-                    </div>
-
-                    {/* Mobile View */}
-                    <div className='d-flex flex-column' id='content-section-three-mobile'>
-                        <div className='bg-section-three' id='section-astronot-3'>
-                            <img className='ml-0' src={Astronot3} alt='astronot' />
-                        </div>
-                        <div>
-                            {[...EDUCATION_HISTORY].reverse().map((edu, idx) => (
-                                <TimelineCard key={idx} period={edu.period} title={edu.major} subtitle={edu.school} icon="fa fa-school" />
-                            ))}
-                        </div>
-                    </div>
-                </AnimationOnScroll>
-            </section>
-
-            {/* --- EXPERIENCE SECTION --- */}
-            <section className='section-three ml-3' id='experience'>
-                <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
-                    <hr className='line' />
-                    <h3 className='text-h3-bold text-center'>Professional Experience</h3>
-                    
-                    {/* Desktop View */}
-                    <div className='d-flex align-items-center' id='content-section-three-desktop'>
-                        <div className='col-md-7'>
-                            {EXPERIENCE_HISTORY.map((exp, idx) => (
-                                <TimelineCard key={idx} period={exp.period} title={exp.role} subtitle={exp.company} icon="fa fa-building" />
-                            ))}
-                        </div>
-                        <div className='col-md-5 bg-section-one'>
-                            <img className='ml-0' src={Astronot2} alt='astronot' />
-                        </div>
-                    </div>
-
-                    {/* Mobile View */}
-                    <div className='d-flex flex-column' id='content-section-three-mobile'>
-                        <div className='bg-section-three' id='section-astronot-3'>
-                            <img className='ml-0' src={Astronot2} alt='astronot' />
-                        </div>
-                        <div>
-                            {EXPERIENCE_HISTORY.map((exp, idx) => (
-                                <TimelineCard key={idx} period={exp.period} title={exp.role} subtitle={exp.company} icon="fa fa-building" />
-                            ))}
-                        </div>
-                    </div>
-                </AnimationOnScroll>
-            </section>
-
-            {/* --- PROJECTS SECTION --- */}
-            <section className='section-three ml-3' id='project'>
-                <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
-                    <hr className='line' />
-                    <div className='text-center mb-4'>
-                        <h3 className='text-h3-bold'>Featured Projects</h3>
-                        <p className='mt-2' style={{ fontSize: '1.1rem', maxWidth: '700px', margin: '10px auto' }}>
-                            Showcasing enterprise-level solutions built with modern technologies
-                        </p>
-                        <div className='d-flex justify-content-center align-items-center mt-3'>
-                            <span style={{ color: textColorWhite, backgroundColor: primaryColor, padding: '8px 20px', borderRadius: '20px', fontWeight: 'bold', fontSize: '0.9rem' }}>
-                                <i className="fas fa-briefcase mr-2"></i>
-                                7+ Professional Projects Delivered
-                            </span>
                         </div>
                     </div>
                     
-                    <Carousel
-                        swipeable={true}
-                        draggable={false}
-                        responsive={responsiveProjects}
-                        showDots={true}
-                        infinite={true}
-                        autoPlay={true}
-                        autoPlaySpeed={3000}
-                        showArrows={true}
-                        customTransition="transform 500ms ease-in-out"
-                        transitionDuration={500}
-                    >
-                        {projects.map((item, index) => (
-                            <div className='card-projects mb-3' key={index} style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
-                                <div style={{ position: 'absolute', top: '15px', left: '15px', zIndex: 10 }}>
-                                    <span style={{ backgroundColor: primaryColor, padding: '5px 15px', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', color: textColorWhite }}>
-                                        Image #{index + 1}
-                                    </span>
-                                </div>
-                                <img 
-                                    src={require(`../assets/projects/${item.image}`)} 
-                                    alt={item.name} 
-                                    style={{ transition: 'transform 0.3s ease', width: '100%', height: 'auto' }}
-                                    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                                    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                                />
-                                <div className="description" style={{ background: 'linear-gradient(135deg, rgba(44, 41, 41, 0.95) 0%, rgba(40,40,40,0.95) 100%)' }}>
-                                    <h5 style={{ color: primaryColor, marginBottom: '10px', fontSize: '1.3rem', fontWeight: 'bold' }}>{item.name}</h5>
-                                    <p style={{ marginBottom: '15px', lineHeight: '1.6', color: textColorWhite }}>{item.description}</p>
-                                    <div className='d-flex align-items-center justify-content-between'>
-                                        {item.url ? 
-                                            <a className='link-url' target='_blank' rel="noopener noreferrer" href={item.url} style={{ backgroundColor: primaryColor, color: textColorWhite, padding: '10px 20px', borderRadius: '25px', textDecoration: 'none', fontWeight: 'bold', transition: 'all 0.3s ease' }}>
-                                                <i className="fas fa-external-link-alt mr-2"></i>
-                                                View Live Project
-                                            </a> 
-                                            : 
-                                            <span style={{ backgroundColor: 'rgba(51,51,51,0.1)', color: textColorWhite, padding: '10px 20px', borderRadius: '25px', fontSize: '0.9rem' }}>
-                                                <i className="fas fa-lock mr-2"></i>
-                                                Confidential Project
-                                            </span>
-                                        }
-                                        <div style={{ display: 'flex', gap: '10px' }}>
-                                            <i className="fas fa-code" style={{ color: primaryColor, fontSize: '1.2rem' }} title="Production Ready"></i>
-                                            <i className="fas fa-check-circle" style={{ color: '#4CAF50', fontSize: '1.2rem' }} title="Completed"></i>
+                    <div className='bg-section-one d-flex flex-column align-items-center' style={{ cursor: 'grab' }}>
+                        <img className='ml-0 astro-img' src={Astronot1} alt='astronot' style={{ userSelect: 'none', touchAction: 'none' }} />
+                        <span className="badge badge-pill badge-primary mt-2" style={{ opacity: 0.8, fontSize: '0.75rem', padding: '6px 12px' }}>
+                            <i className="fas fa-hand-pointer mr-1"></i> Drag me!
+                        </span>
+                    </div>
+                </section>
+
+                {/* --- ABOUT SECTION --- */}
+                <section className='section-two ml-3' id='about'>
+                    <hr className='line' />
+                    <h3 className='text-h3-bold text-center'>About Me</h3>
+                    <div className='d-flex align-items-center' id='content-section-two'>
+                        <div className='col-md-6'>
+                            <div className='text-center'>
+                                <img src={myPict} className='my-pict' alt='my-pict' onClick={handleProfileClick} style={{ cursor: 'pointer', transition: 'box-shadow 0.3s' }} title="Click to spin!" />
+                            </div>
+                        </div>
+                        <div className='col-md-6 mt-5'>
+                            <h3 className='text-h3-bold'>Who am i?</h3>
+                            <p className='text-justify text-about'>
+                                I'm a passionate Software Developer create web and mobile applications. I hold an Associate's degree in Informatics Management and currently leverage my skills in the fast-paced Fintech industry. While I'm based in <span style={{ color: primaryColor }}>Jakarta & Makassar, Indonesia</span>, I'm a quick learner, highly adaptable, and excited by the prospect of new challenges anywhere.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* --- EDUCATION SECTION --- */}
+                <section className='section-three ml-3' id='education'>
+                    <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
+                        <hr className='line' />
+                        <h3 className='text-h3-bold text-center'>My Education</h3>
+                        
+                        {/* Desktop View */}
+                        <div className='d-flex align-items-center' id='content-section-three-desktop'>
+                            <div className='col-md-7 col-xs-12 col-sm-12'>
+                                {EDUCATION_HISTORY.map((edu, idx) => (
+                                    <TimelineCard key={idx} period={edu.period} title={edu.major} subtitle={edu.school} icon="fa fa-school" />
+                                ))}
+                            </div>
+                            <div className='col-md-5 col-xs-12 col-sm-12 bg-section-two' id='section-astronot-3' style={{ cursor: 'grab' }}>
+                                <img className='ml-0 astro-img-3' src={Astronot3} alt='astronot' style={{ userSelect: 'none', touchAction: 'none' }} />
+                            </div>
+                        </div>
+
+                        {/* Mobile View */}
+                        <div className='d-flex flex-column' id='content-section-three-mobile'>
+                            <div className='bg-section-three' id='section-astronot-3' style={{ cursor: 'grab' }}>
+                                <img className='ml-0 astro-img-3' src={Astronot3} alt='astronot' style={{ userSelect: 'none', touchAction: 'none' }} />
+                            </div>
+                            <div>
+                                {[...EDUCATION_HISTORY].reverse().map((edu, idx) => (
+                                    <TimelineCard key={idx} period={edu.period} title={edu.major} subtitle={edu.school} icon="fa fa-school" />
+                                ))}
+                            </div>
+                        </div>
+                    </AnimationOnScroll>
+                </section>
+
+                {/* --- CAREER TIMELINE SECTION --- */}
+                <CareerTimeline />
+
+                {/* --- PROJECTS SECTION --- */}
+                <section className='section-three ml-3' id='project'>
+                    <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+                        <hr className='line' />
+                        <div className='text-center mb-4'>
+                            <h3 className='text-h3-bold'>Featured Projects</h3>
+                            <p className='mt-2' style={{ fontSize: '1.1rem', maxWidth: '700px', margin: '10px auto' }}>
+                                Showcasing enterprise-level solutions built with modern technologies
+                            </p>
+                            <div className='d-flex justify-content-center align-items-center mt-3'>
+                                <span style={{ color: textColorWhite, backgroundColor: primaryColor, padding: '8px 20px', borderRadius: '20px', fontWeight: 'bold', fontSize: '0.9rem' }}>
+                                    <i className="fas fa-briefcase mr-2"></i>
+                                    7+ Professional Projects Delivered
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <Carousel
+                            swipeable={true}
+                            draggable={false}
+                            responsive={responsiveProjects}
+                            showDots={true}
+                            infinite={true}
+                            autoPlay={true}
+                            autoPlaySpeed={3000}
+                            showArrows={true}
+                            customTransition="transform 500ms ease-in-out"
+                            transitionDuration={500}
+                        >
+                            {projects.map((item, index) => (
+                                <div className='card-projects mb-3' key={index} style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
+                                    <div style={{ position: 'absolute', top: '15px', left: '15px', zIndex: 10 }}>
+                                        <span style={{ backgroundColor: primaryColor, padding: '5px 15px', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', color: textColorWhite }}>
+                                            Image #{index + 1}
+                                        </span>
+                                    </div>
+                                    <img 
+                                        src={require(`../assets/projects/${item.image}`)} 
+                                        alt={item.name} 
+                                        style={{ transition: 'transform 0.3s ease', width: '100%', height: 'auto' }}
+                                        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                                        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                                    />
+                                    <div className="description" style={{ background: 'linear-gradient(135deg, rgba(44, 41, 41, 0.95) 0%, rgba(40,40,40,0.95) 100%)' }}>
+                                        <h5 style={{ color: primaryColor, marginBottom: '10px', fontSize: '1.3rem', fontWeight: 'bold' }}>{item.name}</h5>
+                                        <p style={{ marginBottom: '15px', lineHeight: '1.6', color: textColorWhite }}>{item.description}</p>
+                                        <div className='d-flex align-items-center justify-content-between'>
+                                            {item.url ? 
+                                                <a className='link-url' target='_blank' rel="noopener noreferrer" href={item.url} style={{ backgroundColor: primaryColor, color: textColorWhite, padding: '10px 20px', borderRadius: '25px', textDecoration: 'none', fontWeight: 'bold', transition: 'all 0.3s ease' }}>
+                                                    <i className="fas fa-external-link-alt mr-2"></i>
+                                                    View Live Project
+                                                </a> 
+                                                : 
+                                                <span style={{ backgroundColor: 'rgba(51,51,51,0.1)', color: textColorWhite, padding: '10px 20px', borderRadius: '25px', fontSize: '0.9rem' }}>
+                                                    <i className="fas fa-lock mr-2"></i>
+                                                    Confidential Project
+                                                </span>
+                                            }
+                                            <div style={{ display: 'flex', gap: '10px' }}>
+                                                <i className="fas fa-code" style={{ color: primaryColor, fontSize: '1.2rem' }} title="Production Ready"></i>
+                                                <i className="fas fa-check-circle" style={{ color: '#4CAF50', fontSize: '1.2rem' }} title="Completed"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            ))}
+                        </Carousel>
+                    </AnimationOnScroll>
+                </section>
+
+                {/* --- SKILLS SECTION --- */}
+                <section className='' id='skill'>
+                    <hr className='line' />
+                    <h3 className='text-h3-bold text-center mb-5'>Technologies I Use</h3>
+                    <Carousel
+                        swipeable={false}
+                        draggable={false}
+                        responsive={responsive}
+                        showDots={false}
+                        infinite={true}
+                        autoPlay={true}
+                        autoPlaySpeed={1000}
+                        removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+                    >
+                        {skill.map((i, index) => (
+                            <div className='card-skills mb-3' key={index}>
+                                <img src={require(`../assets/${i.logo}`)} alt={i.name} />
                             </div>
                         ))}
                     </Carousel>
-                </AnimationOnScroll>
-            </section>
+                </section>
 
-            {/* --- SKILLS SECTION --- */}
-            <section className='' id='skill'>
-                <hr className='line' />
-                <h3 className='text-h3-bold text-center mb-5'>Technologies I Use</h3>
-                <Carousel
-                    swipeable={false}
-                    draggable={false}
-                    responsive={responsive}
-                    showDots={false}
-                    infinite={true}
-                    autoPlay={true}
-                    autoPlaySpeed={1000}
-                    removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-                >
-                    {skill.map((i, index) => (
-                        <div className='card-skills mb-3' key={index}>
-                            <img src={require(`../assets/${i.logo}`)} alt={i.name} />
+                {/* --- CONTACT SECTION --- */}
+                <section className='mt-5' id='contact'>
+                    <h3 className='text-h3-bold text-center mb-3'>Get In Touch</h3>
+                    <div className='row justify-content-around'>
+                        <div className='col-md-6'>
+                            <div className='d-flex mt-3'>
+                                <i className="far fa-envelope mr-1"></i>
+                                <a className='cursor-pointer text-decoration-none text-dark' target='_blank' rel="noopener noreferrer" href="mailto:fawwazbayureksa@gmail.com">
+                                    <h6 className='font-weight-bold'>fawwazbayureksa@gmail.com</h6>
+                                </a>
+                            </div>
+                            <div className='d-flex mt-3'>
+                                <i className="fas fa-phone-alt mr-1"></i>
+                                <a className='cursor-pointer text-decoration-none text-dark' target='_blank' rel="noopener noreferrer" href="https://wa.me/+6282394418669"> 
+                                    <h6 className='font-weight-bold'>+6282394418669</h6>
+                                </a>
+                            </div>
+                            <div className='d-flex mt-3'>
+                                <i className="fas fa-map-marker-alt mr-1"></i>
+                                <h6 className='font-weight-bold'>Makassar | Jakarta, Indonesia</h6>
+                            </div>
                         </div>
-                    ))}
-                </Carousel>
-            </section>
-
-            {/* --- CONTACT SECTION --- */}
-            <section className='mt-5' id='contact'>
-                <h3 className='text-h3-bold text-center mb-3'>Get In Touch</h3>
-                <div className='row justify-content-around'>
-                    <div className='col-md-6'>
-                        <div className='d-flex mt-3'>
-                            <i className="far fa-envelope mr-1"></i>
-                            <a className='cursor-pointer text-decoration-none text-dark' target='_blank' rel="noopener noreferrer" href="mailto:fawwazbayureksa@gmail.com">
-                                <h6 className='font-weight-bold'>fawwazbayureksa@gmail.com</h6>
-                            </a>
-                        </div>
-                        <div className='d-flex mt-3'>
-                            <i className="fas fa-phone-alt mr-1"></i>
-                            <a className='cursor-pointer text-decoration-none text-dark' target='_blank' rel="noopener noreferrer" href="https://wa.me/+6282394418669"> 
-                                <h6 className='font-weight-bold'>+6282394418669</h6>
-                            </a>
-                        </div>
-                        <div className='d-flex mt-3'>
-                            <i className="fas fa-map-marker-alt mr-1"></i>
-                            <h6 className='font-weight-bold'>Makassar | Jakarta, Indonesia</h6>
+                        <div className='col-md-6'>
+                            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfepvjX1lcQbWGmnqlSVKcW3tTU4YlCilNGmrKHZDO2TC3ukw/formResponse" target="_blank" method="post">
+                                <div>
+                                    <input type="email" className="form-control mt-3" placeholder="Your E-mail" name="entry.178149943" required />
+                                </div>
+                                <div>
+                                    <textarea className="form-control mt-3" placeholder="Message" name="entry.315198414" required></textarea>
+                                </div>
+                                <div className="mt-3">
+                                    <button type="submit" name="submit" className="button mt-2">Send Message</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div className='col-md-6'>
-                        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfepvjX1lcQbWGmnqlSVKcW3tTU4YlCilNGmrKHZDO2TC3ukw/formResponse" target="_blank" method="post">
-                            <div>
-                                <input type="email" className="form-control mt-3" placeholder="Your E-mail" name="entry.178149943" required />
-                            </div>
-                            <div>
-                                <textarea className="form-control mt-3" placeholder="Message" name="entry.315198414" required></textarea>
-                            </div>
-                            <div className="mt-3">
-                                <button type="submit" name="submit" className="button mt-2">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </Template>
+                </section>
+            </Template>
+        </div>
     );
 };
 

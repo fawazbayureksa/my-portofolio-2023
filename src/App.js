@@ -1,5 +1,4 @@
 import './App.css';
-import AppRoute from './AppRoute';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -8,9 +7,7 @@ import "animate.css/animate.min.css";
 import Home from './pages/Home';
 
 function App() {
-
   return (
-    // <AppRoute />
     <Home />
   );
 }

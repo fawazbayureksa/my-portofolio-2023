@@ -222,11 +222,15 @@ nav a:focus::before {
 }
 
 .section-two {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  padding: 40px 0;
 }
 
 .section-three {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  padding: 40px 0;
 }
 
 .bg-section-one {
@@ -246,6 +250,12 @@ nav a:focus::before {
   font-size: 2rem;
 }
 
+.fw-bold{
+  font-weight: 700;
+}
+.fw-semi-bold{
+  font-weight: 600;
+}
 
 .text-h3-bold {
   font-size: 2rem;
@@ -453,7 +463,8 @@ nav a:focus::before {
   }
 
   .section-two {
-    height: 80vh !important;
+    height: auto !important;
+    min-height: 80vh;
   }
 
   .section-two #content-section-two {
