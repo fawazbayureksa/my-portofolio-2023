@@ -8,6 +8,7 @@ import myPict from '../assets/pict_02_26.JPG';
 import Astronot1 from '../assets/astronot.png';
 import Astronot2 from '../assets/astronot2.png';
 import Astronot3 from '../assets/astronot3.png';
+import { CareerTimeline } from '../components/CareerTimeline';
 
 const primaryColor = '#3b82f6';     // Terracotta modern
 const secondaryColor = '#60a5fa';   // Soft sand
@@ -213,37 +214,8 @@ const Home = () => {
                 </AnimationOnScroll>
             </section>
 
-            {/* --- EXPERIENCE SECTION --- */}
-            <section className='section-three ml-3' id='experience'>
-                <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
-                    <hr className='line' />
-                    <h3 className='text-h3-bold text-center'>Professional Experience</h3>
-                    
-                    {/* Desktop View */}
-                    <div className='d-flex align-items-center' id='content-section-three-desktop'>
-                        <div className='col-md-7'>
-                            {EXPERIENCE_HISTORY.map((exp, idx) => (
-                                <TimelineCard key={idx} period={exp.period} title={exp.role} subtitle={exp.company} icon="fa fa-building" />
-                            ))}
-                        </div>
-                        <div className='col-md-5 bg-section-one'>
-                            <img className='ml-0' src={Astronot2} alt='astronot' />
-                        </div>
-                    </div>
-
-                    {/* Mobile View */}
-                    <div className='d-flex flex-column' id='content-section-three-mobile'>
-                        <div className='bg-section-three' id='section-astronot-3'>
-                            <img className='ml-0' src={Astronot2} alt='astronot' />
-                        </div>
-                        <div>
-                            {EXPERIENCE_HISTORY.map((exp, idx) => (
-                                <TimelineCard key={idx} period={exp.period} title={exp.role} subtitle={exp.company} icon="fa fa-building" />
-                            ))}
-                        </div>
-                    </div>
-                </AnimationOnScroll>
-            </section>
+            {/* --- CAREER TIMELINE SECTION --- */}
+            <CareerTimeline />
 
             {/* --- PROJECTS SECTION --- */}
             <section className='section-three ml-3' id='project'>
