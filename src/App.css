@@ -210,9 +210,11 @@ nav a:focus::before {
 
 .section-one {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   justify-content: space-between;
   align-items: center;
+  padding: 40px 0;
 }
 
 .text-section-one {
@@ -222,11 +224,18 @@ nav a:focus::before {
 }
 
 .section-two {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-three {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  padding: 80px 0;
 }
 
 .bg-section-one {
@@ -452,8 +461,10 @@ nav a:focus::before {
     padding: 20px 0;
   }
 
-  .section-two {
-    height: 80vh !important;
+  .section-two, .section-three {
+    height: auto !important;
+    min-height: 100vh;
+    padding: 60px 0 !important;
   }
 
   .section-two #content-section-two {

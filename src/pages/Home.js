@@ -8,6 +8,7 @@ import myPict from '../assets/pict_02_26.JPG';
 import Astronot1 from '../assets/astronot.png';
 import Astronot2 from '../assets/astronot2.png';
 import Astronot3 from '../assets/astronot3.png';
+import ProjectSection from '../components/ProjectSection';
 
 const primaryColor = '#3b82f6';     // Terracotta modern
 const secondaryColor = '#60a5fa';   // Soft sand
@@ -27,7 +28,7 @@ const ROLES = [
 
 const STATS = [
     { icon: 'fas fa-briefcase', label: '5 Years Experience' },
-    { icon: 'fas fa-project-diagram', label: '7+ Projects Delivered' },
+    { icon: 'fas fa-project-diagram', label: '8+ Projects Delivered' },
     { icon: 'fas fa-building', label: 'Digital Industry' }
 ];
 
@@ -246,77 +247,10 @@ const Home = () => {
             </section>
 
             {/* --- PROJECTS SECTION --- */}
-            <section className='section-three ml-3' id='project'>
-                <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
-                    <hr className='line' />
-                    <div className='text-center mb-4'>
-                        <h3 className='text-h3-bold'>Featured Projects</h3>
-                        <p className='mt-2' style={{ fontSize: '1.1rem', maxWidth: '700px', margin: '10px auto' }}>
-                            Showcasing enterprise-level solutions built with modern technologies
-                        </p>
-                        <div className='d-flex justify-content-center align-items-center mt-3'>
-                            <span style={{ color: textColorWhite, backgroundColor: primaryColor, padding: '8px 20px', borderRadius: '20px', fontWeight: 'bold', fontSize: '0.9rem' }}>
-                                <i className="fas fa-briefcase mr-2"></i>
-                                7+ Professional Projects Delivered
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <Carousel
-                        swipeable={true}
-                        draggable={false}
-                        responsive={responsiveProjects}
-                        showDots={true}
-                        infinite={true}
-                        autoPlay={true}
-                        autoPlaySpeed={3000}
-                        showArrows={true}
-                        customTransition="transform 500ms ease-in-out"
-                        transitionDuration={500}
-                    >
-                        {projects.map((item, index) => (
-                            <div className='card-projects mb-3' key={index} style={{ position: 'relative', overflow: 'hidden', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
-                                <div style={{ position: 'absolute', top: '15px', left: '15px', zIndex: 10 }}>
-                                    <span style={{ backgroundColor: primaryColor, padding: '5px 15px', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', color: textColorWhite }}>
-                                        Image #{index + 1}
-                                    </span>
-                                </div>
-                                <img 
-                                    src={require(`../assets/projects/${item.image}`)} 
-                                    alt={item.name} 
-                                    style={{ transition: 'transform 0.3s ease', width: '100%', height: 'auto' }}
-                                    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                                    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                                />
-                                <div className="description" style={{ background: 'linear-gradient(135deg, rgba(44, 41, 41, 0.95) 0%, rgba(40,40,40,0.95) 100%)' }}>
-                                    <h5 style={{ color: primaryColor, marginBottom: '10px', fontSize: '1.3rem', fontWeight: 'bold' }}>{item.name}</h5>
-                                    <p style={{ marginBottom: '15px', lineHeight: '1.6', color: textColorWhite }}>{item.description}</p>
-                                    <div className='d-flex align-items-center justify-content-between'>
-                                        {item.url ? 
-                                            <a className='link-url' target='_blank' rel="noopener noreferrer" href={item.url} style={{ backgroundColor: primaryColor, color: textColorWhite, padding: '10px 20px', borderRadius: '25px', textDecoration: 'none', fontWeight: 'bold', transition: 'all 0.3s ease' }}>
-                                                <i className="fas fa-external-link-alt mr-2"></i>
-                                                View Live Project
-                                            </a> 
-                                            : 
-                                            <span style={{ backgroundColor: 'rgba(51,51,51,0.1)', color: textColorWhite, padding: '10px 20px', borderRadius: '25px', fontSize: '0.9rem' }}>
-                                                <i className="fas fa-lock mr-2"></i>
-                                                Confidential Project
-                                            </span>
-                                        }
-                                        <div style={{ display: 'flex', gap: '10px' }}>
-                                            <i className="fas fa-code" style={{ color: primaryColor, fontSize: '1.2rem' }} title="Production Ready"></i>
-                                            <i className="fas fa-check-circle" style={{ color: '#4CAF50', fontSize: '1.2rem' }} title="Completed"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </Carousel>
-                </AnimationOnScroll>
-            </section>
+            <ProjectSection projects={projects} primaryColor={primaryColor} textColorWhite={textColorWhite} responsiveProjects={responsiveProjects} />
 
             {/* --- SKILLS SECTION --- */}
-            <section className='' id='skill'>
+            <section className='ml-3' id='skill' style={{ padding: '80px 0' }}>
                 <hr className='line' />
                 <h3 className='text-h3-bold text-center mb-5'>Technologies I Use</h3>
                 <Carousel
@@ -338,7 +272,7 @@ const Home = () => {
             </section>
 
             {/* --- CONTACT SECTION --- */}
-            <section className='mt-5' id='contact'>
+            <section className='ml-3' id='contact' style={{ padding: '80px 0', marginBottom: '40px' }}>
                 <h3 className='text-h3-bold text-center mb-3'>Get In Touch</h3>
                 <div className='row justify-content-around'>
                     <div className='col-md-6'>
