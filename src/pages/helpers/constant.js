@@ -52,7 +52,11 @@ export const skill = [
         logo: 'react-native.png'
     },
     {
-        name: 'Golang (Basic)',
+        name: 'Swift',
+        logo: 'swift.png'
+    },
+    {
+        name: 'Golang',
         logo: 'go.png'
     },
     {
@@ -78,7 +82,23 @@ export const skill = [
      {
         name:'Git Co-Pilot',
         logo:'git-copilot.png'
-     }
+    },
+    {
+        name:'Grafana',
+        logo:'grafana.png'
+     },
+    {
+        name:'Prometheus',
+        logo:'Prometheus.png'
+     },
+    {
+        name:'NextJS',
+        logo:'nextjs.jpg'
+     },
+    {
+        name:'PostgreSQL',
+        logo:'PostgreSQL.png'
+     },
 ]
 
 export const projects = [
@@ -118,6 +138,16 @@ export const projects = [
         ]
     },
     {
+        name: 'MyMoneyManage (Ios & Android & Web)',
+        description: 'A sleek and intuitive personal finance management application designed to help users track their expenses, set budgets, and achieve their financial goals. Built with modern web technologies for a seamless user experience.',
+        image: 'money_manage_home_ios.png',
+        url: null,
+        gallery: [
+            { image: 'money_manage_home_ios.png', title: 'Personal Finance Management App Ios & Android & Web' },
+            { image: 'money_manage_home.png', title: 'Expense Tracking Dashboard' }
+        ]
+    },
+    {
         name: 'Tokodapur Ecosystem (Web & Mobile)',
         description: 'An e-commerce platform specializing in kitchen utensils, offering a wide range of products for online shoppers. Includes a web platform, auction system, and a React Native mobile application.',
         image: 'web_forum.png',
@@ -130,13 +160,12 @@ export const projects = [
         ]
     },
     {
-        name: 'MyMoneyManage (Ios & Android & Web)',
-        description: 'A sleek and intuitive personal finance management application designed to help users track their expenses, set budgets, and achieve their financial goals. Built with modern web technologies for a seamless user experience.',
-        image: 'money_manage_home_ios.png',
+        name: 'Singa Fintech Marketing System (Web)',
+        description :' A comprehensive system aimed at boosting revenue by engaging old users through targeted offers and attracting new customers with enticing promotions.',
+        image: 'marketing_landing.png',
         url: null,
         gallery: [
-            { image: 'money_manage_home_ios.png', title: 'Personal Finance Management App Ios & Android & Web' },
-            { image: 'money_manage_home.png', title: 'Expense Tracking Dashboard' }
+            { image: 'marketing_landing.png', title: 'Marketing System' },
         ]
     },
     {
@@ -147,15 +176,6 @@ export const projects = [
         gallery: [
             { image: 'singaid_landing.png', title: 'Singa Fintech Landing Page' },
             { image: 'singaid_blog.png', title: 'Singa Fintech Blog Page' }
-        ]
-    },
-    {
-        name: 'Singa Fintech Marketing System (Web)',
-        description :' A comprehensive system aimed at boosting revenue by engaging old users through targeted offers and attracting new customers with enticing promotions.',
-        image: 'marketing_landing.png',
-        url: null,
-        gallery: [
-            { image: 'marketing_landing.png', title: 'Marketing System' },
         ]
     },
     {

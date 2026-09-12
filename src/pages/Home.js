@@ -9,6 +9,7 @@ import Astronot1 from '../assets/astronot.png';
 import Astronot2 from '../assets/astronot2.png';
 import Astronot3 from '../assets/astronot3.png';
 import ProjectSection from '../components/ProjectSection';
+import SkillSection from '../components/SkillSection';
 
 const primaryColor = '#3b82f6';     // Terracotta modern
 const secondaryColor = '#60a5fa';   // Soft sand
@@ -250,26 +251,7 @@ const Home = () => {
             <ProjectSection projects={projects} primaryColor={primaryColor} textColorWhite={textColorWhite} responsiveProjects={responsiveProjects} />
 
             {/* --- SKILLS SECTION --- */}
-            <section className='ml-3' id='skill' style={{ padding: '80px 0' }}>
-                <hr className='line' />
-                <h3 className='text-h3-bold text-center mb-5'>Technologies I Use</h3>
-                <Carousel
-                    swipeable={false}
-                    draggable={false}
-                    responsive={responsive}
-                    showDots={false}
-                    infinite={true}
-                    autoPlay={true}
-                    autoPlaySpeed={1000}
-                    removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-                >
-                    {skill.map((i, index) => (
-                        <div className='card-skills mb-3' key={index}>
-                            <img src={require(`../assets/${i.logo}`)} alt={i.name} />
-                        </div>
-                    ))}
-                </Carousel>
-            </section>
+            <SkillSection skills={skill} primaryColor={primaryColor} />
 
             {/* --- CONTACT SECTION --- */}
             <section className='ml-3' id='contact' style={{ padding: '80px 0', marginBottom: '40px' }}>
