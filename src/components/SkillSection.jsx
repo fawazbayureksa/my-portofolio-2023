@@ -5,10 +5,10 @@ import 'animate.css/animate.min.css';
 export default function SkillSection({ skills, primaryColor }) {
     
     const categories = {
-        "Frontend & Mobile": ["Javascript", "ReactJS","NextJS", "ReactNative","Swift"],
+        "Frontend & Mobile": ["Javascript", "ReactJS","NextJS", "ReactNative","Swift","Tailwind CSS"],
         "Backend & Database": ["PHP", "Laravel", "Golang", "SQL", "MySQL", "Redis", "Rabbit MQ","PostgreSQL"],
-        "Cloud & Services": ["Firebase", "Supabase", "Google Cloud Platform"],
-        "DevOps & Tools": ["Gitlab", "Github", "Linux", "Jira","Grafana","Prometheus"],
+        "Cloud & Services": ["Firebase", "Supabase", "Google Cloud Platform","Alibaba"],
+        "DevOps & Tools": ["Gitlab", "Github", "Linux", "Jira","Grafana","Prometheus","Jenkins"],
         "AI & Productivity": ["Claude", "ChatGPT", "Git Co-Pilot"]
     };
 
