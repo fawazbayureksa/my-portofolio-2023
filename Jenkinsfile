@@ -12,6 +12,7 @@ pipeline {
                     . "$NVM_DIR/nvm.sh"
                     nvm use 20
 
+                    echo "=== Environment ==="
                     node -v
                     npm -v
                     which node
@@ -25,6 +26,11 @@ pipeline {
                     . "$NVM_DIR/nvm.sh"
                     nvm use 20
 
+                    echo "=== Install Dependencies ==="
+                    node -v
+                    npm -v
+                    which node
+
                     npm ci
                 '''
             }
@@ -36,6 +42,10 @@ pipeline {
                     . "$NVM_DIR/nvm.sh"
                     nvm use 20
 
+                    echo "=== Build ==="
+                    node -v
+                    npm -v
+
                     npm run build
                 '''
             }
@@ -45,6 +55,8 @@ pipeline {
             steps {
                 sshagent(['portfolio-server']) {
                     sh '''
+                        echo "=== Deploy ==="
+
                         rsync -av --delete \
                             --no-owner \
                             --no-group \
