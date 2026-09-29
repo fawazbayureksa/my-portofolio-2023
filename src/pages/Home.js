@@ -110,7 +110,6 @@ const Home = () => {
 
     return (
         <Template>
-            {/* --- HERO SECTION --- */}
             <section className="section-one ml-3" id='home'>
                 <div className='text-section-one' style={{ animation: 'fadeInUp 1s ease-out', animationFillMode: 'both' }}>
                     <div style={{ marginBottom: '10px' }}>
@@ -162,7 +161,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* --- ABOUT SECTION --- */}
             <section className='section-two ml-3' id='about'>
                 <hr className='line' />
                 <h3 className='text-h3-bold text-center'>About Me</h3>
@@ -181,13 +179,11 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* --- EDUCATION SECTION --- */}
             <section className='section-three ml-3' id='education'>
                 <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
                     <hr className='line' />
                     <h3 className='text-h3-bold text-center'>My Education</h3>
                     
-                    {/* Desktop View */}
                     <div className='d-flex align-items-center' id='content-section-three-desktop'>
                         <div className='col-md-7 col-xs-12 col-sm-12'>
                             {EDUCATION_HISTORY.map((edu, idx) => (
@@ -199,7 +195,6 @@ const Home = () => {
                         </div>
                     </div>
 
-                    {/* Mobile View */}
                     <div className='d-flex flex-column' id='content-section-three-mobile'>
                         <div className='bg-section-three' id='section-astronot-3'>
                             <img className='ml-0' src={Astronot3} alt='astronot' />
@@ -213,13 +208,11 @@ const Home = () => {
                 </AnimationOnScroll>
             </section>
 
-            {/* --- EXPERIENCE SECTION --- */}
             <section className='section-three ml-3' id='experience'>
                 <AnimationOnScroll animateIn="animate__fadeInLeftBig" duration={2}>
                     <hr className='line' />
                     <h3 className='text-h3-bold text-center'>Professional Experience</h3>
                     
-                    {/* Desktop View */}
                     <div className='d-flex align-items-center' id='content-section-three-desktop'>
                         <div className='col-md-7'>
                             {EXPERIENCE_HISTORY.map((exp, idx) => (
@@ -231,7 +224,6 @@ const Home = () => {
                         </div>
                     </div>
 
-                    {/* Mobile View */}
                     <div className='d-flex flex-column' id='content-section-three-mobile'>
                         <div className='bg-section-three' id='section-astronot-3'>
                             <img className='ml-0' src={Astronot2} alt='astronot' />
@@ -245,13 +237,10 @@ const Home = () => {
                 </AnimationOnScroll>
             </section>
 
-            {/* --- PROJECTS SECTION --- */}
             <ProjectSection projects={projects} primaryColor={primaryColor} textColorWhite={textColorWhite} responsiveProjects={responsiveProjects} />
 
-            {/* --- SKILLS SECTION --- */}
             <SkillSection skills={skill} primaryColor={primaryColor} />
 
-            {/* --- CONTACT SECTION --- */}
             <section className='ml-3' id='contact' style={{ padding: '80px 0', marginBottom: '40px' }}>
                 <h3 className='text-h3-bold text-center mb-3'>Get In Touch</h3>
                 <div className='row justify-content-around'>
