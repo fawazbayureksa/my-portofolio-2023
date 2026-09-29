@@ -10,7 +10,6 @@ import Home from './pages/Home';
 function App() {
 
   return (
-    // <AppRoute />
     <Home />
   );
 }
