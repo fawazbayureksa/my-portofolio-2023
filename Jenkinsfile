@@ -1,16 +1,43 @@
 pipeline {
     agent any
 
+    environment {
+        NVM_DIR = '/mnt/data/jenkins/.nvm'
+    }
+
     stages {
+        stage('Environment') {
+            steps {
+                sh '''
+                    . "$NVM_DIR/nvm.sh"
+                    nvm use 20
+
+                    node -v
+                    npm -v
+                    which node
+                '''
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'
+                sh '''
+                    . "$NVM_DIR/nvm.sh"
+                    nvm use 20
+
+                    npm ci
+                '''
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run build'
+                sh '''
+                    . "$NVM_DIR/nvm.sh"
+                    nvm use 20
+
+                    npm run build
+                '''
             }
         }
 
