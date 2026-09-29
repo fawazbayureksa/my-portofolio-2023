@@ -99,6 +99,18 @@ export const skill = [
         name:'PostgreSQL',
         logo:'PostgreSQL.png'
      },
+    {
+        name:'Jenkins',
+        logo:'Jenkins.png'
+     },
+    {
+        name:'Tailwind CSS',
+        logo:'Tailwind.png'
+     },
+    {
+        name:'Alibaba',
+        logo:'alibaba.png'
+     },
 ]
 
 export const projects = [
