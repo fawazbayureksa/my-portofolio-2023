@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portofolio-2023/static/css/main.95e26ddd.css",
-    "main.js": "/my-portofolio-2023/static/js/main.552e13f4.js",
+    "main.css": "/my-portofolio-2023/static/css/main.73114f5d.css",
+    "main.js": "/my-portofolio-2023/static/js/main.ef84ee0b.js",
     "static/js/787.9b7600af.chunk.js": "/my-portofolio-2023/static/js/787.9b7600af.chunk.js",
     "static/media/wms_login.png": "/my-portofolio-2023/static/media/wms_login.fb36241fda721c8a0707.png",
     "static/media/mutu_sekolah.png": "/my-portofolio-2023/static/media/mutu_sekolah.351aa5d22e2b3474b8b9.png",
@@ -35,9 +35,11 @@
     "static/media/fa-solid-900.ttf": "/my-portofolio-2023/static/media/fa-solid-900.be9ee23c0c6390141475.ttf",
     "static/media/laravel.png": "/my-portofolio-2023/static/media/laravel.2ebf4db3cc9f1b431979.png",
     "static/media/web_detail_auction.png": "/my-portofolio-2023/static/media/web_detail_auction.669ba762130f75921892.png",
+    "static/media/alibaba.png": "/my-portofolio-2023/static/media/alibaba.24f3e3945dcffd10ad75.png",
     "static/media/fa-regular-400.svg": "/my-portofolio-2023/static/media/fa-regular-400.4689f52cc96215721344.svg",
     "static/media/fa-brands-400.eot": "/my-portofolio-2023/static/media/fa-brands-400.23f19bb08961f37aaf69.eot",
     "static/media/fa-brands-400.ttf": "/my-portofolio-2023/static/media/fa-brands-400.527940b104eb2ea366c8.ttf",
+    "static/media/Jenkins.png": "/my-portofolio-2023/static/media/Jenkins.5f983857b7e6850a2aa3.png",
     "static/media/firebase.png": "/my-portofolio-2023/static/media/firebase.bff5748e0ad72bf0c427.png",
     "static/media/react.png": "/my-portofolio-2023/static/media/react.65ca18b4e9841f85a691.png",
     "static/media/fa-solid-900.woff": "/my-portofolio-2023/static/media/fa-solid-900.eeccf4f66002c6f2ba24.woff",
@@ -56,6 +58,7 @@
     "static/media/redis.png": "/my-portofolio-2023/static/media/redis.4eb58eff8bafd8c473c9.png",
     "static/media/github.png": "/my-portofolio-2023/static/media/github.10f20a424ea81179a83e.png",
     "static/media/nextjs.jpg": "/my-portofolio-2023/static/media/nextjs.2e4714fa8d23f903fb46.jpg",
+    "static/media/Tailwind.png": "/my-portofolio-2023/static/media/Tailwind.ef64fb1ead54f848b11b.png",
     "static/media/fa-regular-400.eot": "/my-portofolio-2023/static/media/fa-regular-400.77206a6bb316fa0aded5.eot",
     "static/media/fa-regular-400.ttf": "/my-portofolio-2023/static/media/fa-regular-400.491974d108fe4002b2aa.ttf",
     "static/media/PostgreSQL.png": "/my-portofolio-2023/static/media/PostgreSQL.4b3e65be21b0d3f35d22.png",
@@ -75,12 +78,12 @@
     "static/media/gcp.svg": "/my-portofolio-2023/static/media/gcp.b11179b8e93782665379.svg",
     "static/media/rabbitmq.svg": "/my-portofolio-2023/static/media/rabbitmq.258baa7f7ef3862e8f0d.svg",
     "index.html": "/my-portofolio-2023/index.html",
-    "main.95e26ddd.css.map": "/my-portofolio-2023/static/css/main.95e26ddd.css.map",
-    "main.552e13f4.js.map": "/my-portofolio-2023/static/js/main.552e13f4.js.map",
+    "main.73114f5d.css.map": "/my-portofolio-2023/static/css/main.73114f5d.css.map",
+    "main.ef84ee0b.js.map": "/my-portofolio-2023/static/js/main.ef84ee0b.js.map",
     "787.9b7600af.chunk.js.map": "/my-portofolio-2023/static/js/787.9b7600af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95e26ddd.css",
-    "static/js/main.552e13f4.js"
+    "static/css/main.73114f5d.css",
+    "static/js/main.ef84ee0b.js"
   ]
 }
