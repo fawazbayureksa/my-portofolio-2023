@@ -1,8 +1,6 @@
-import React from 'react';
 import Template from '../components/Template';
 import { projects, skill } from './helpers/constant'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import myPict from '../assets/pict_02_26.JPG';
 import Astronot1 from '../assets/astronot.png';
@@ -12,12 +10,12 @@ import ProjectSection from '../components/ProjectSection';
 import SkillSection from '../components/SkillSection';
 
 const primaryColor = '#3b82f6';     // Terracotta modern
-const secondaryColor = '#60a5fa';   // Soft sand
+// const secondaryColor = '#60a5fa';   // Soft sand
 const accentColor = '#06b6d4';      // Rich brown
-const thirdColor = '#1e40af';       // Warm caramel
-const fourthColor = '#eff6ff';      // Off-white
+// const thirdColor = '#1e40af';       // Warm caramel
+// const fourthColor = '#eff6ff';      // Off-white
 
-const textColorDark = '#0f172a';
+// const textColorDark = '#0f172a';
 const textColorWhite = '#ffffff';
 
 // --- Data Constants ---
@@ -96,12 +94,12 @@ const TimelineCard = ({ period, title, subtitle, icon }) => (
 );
 
 const Home = () => {
-    const responsive = {
-        superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 8 },
-        desktop: { breakpoint: { max: 3000, min: 1024 }, items: 6 },
-        tablet: { breakpoint: { max: 1024, min: 464 }, items: 3 },
-        mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
-    };
+    // const responsive = {
+    //     superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 8 },
+    //     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 6 },
+    //     tablet: { breakpoint: { max: 1024, min: 464 }, items: 3 },
+    //     mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
+    // };
 
     const responsiveProjects = {
         superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 2 },
