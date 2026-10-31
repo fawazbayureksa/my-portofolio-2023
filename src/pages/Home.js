@@ -132,7 +132,7 @@ const Home = () => {
                         Building <span style={{ color: primaryColor, fontWeight: 'bold' }}>enterprise-level</span> web & mobile applications
                     </h3>
                     
-                    <div style={{ display: 'flex', gap: '15px', marginBottom: '25px', flexWrap: 'wrap',fontWeight: 'semi-bold' }}>
+                    <div style={{ display: 'flex', gap: '15px', marginBottom: '25px', flexWrap: 'wrap',fontWeight: 'bold' }}>
                         {STATS.map((stat, idx) => <StatCard key={idx} icon={stat.icon} label={stat.label} />)}
                     </div>
 
