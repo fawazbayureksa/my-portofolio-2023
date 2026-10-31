@@ -16,12 +16,12 @@ Fawwaz Bayureksa has more than five years of experience delivering software. He 
 
 ## Selected projects
 
-- [Warehouse Management System](https://fawazbayureksa.github.io/my-portofolio-2023/#project): web platform for inventory and supply chain management.
-- [Mutu Sekolah](https://fawazbayureksa.github.io/my-portofolio-2023/#project): school quality management and evaluation platform.
-- [OmniCare Platform](https://fawazbayureksa.github.io/my-portofolio-2023/#project): multi-tenant enterprise customer service and ticketing platform.
-- [MyMoneyManage](https://fawazbayureksa.github.io/my-portofolio-2023/#project): personal finance app for iOS, Android, and web.
-- [Tokodapur Ecosystem](https://fawazbayureksa.github.io/my-portofolio-2023/#project): e-commerce and auction platform with a React Native mobile app.
-- [Singa Fintech](https://fawazbayureksa.github.io/my-portofolio-2023/#project): marketing system and company landing page for a fintech company.
+- [Warehouse Management System](https://fawwazbayureksa.xyz/#project): web platform for inventory and supply chain management.
+- [Mutu Sekolah](https://fawwazbayureksa.xyz/#project): school quality management and evaluation platform.
+- [OmniCare Platform](https://fawwazbayureksa.xyz/#project): multi-tenant enterprise customer service and ticketing platform.
+- [MyMoneyManage](https://fawwazbayureksa.xyz/#project): personal finance app for iOS, Android, and web.
+- [Tokodapur Ecosystem](https://fawwazbayureksa.xyz/#project): e-commerce and auction platform with a React Native mobile app.
+- [Singa Fintech](https://fawwazbayureksa.xyz/#project): marketing system and company landing page for a fintech company.
 
 ## Experience
 

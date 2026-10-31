@@ -1,4 +1,4 @@
-# robots.txt for https://fawazbayureksa.github.io/my-portofolio-2023/
+# robots.txt for https://fawwazbayureksa.xyz/
 
 # Search engines
 User-agent: *
@@ -22,4 +22,4 @@ User-agent: Amazonbot
 User-agent: meta-externalagent
 Allow: /
 
-Sitemap: https://fawazbayureksa.github.io/my-portofolio-2023/sitemap.xml
+Sitemap: https://fawwazbayureksa.xyz/sitemap.xml
