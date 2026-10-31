@@ -19,7 +19,7 @@ export default function SkillSection({ skills, primaryColor }) {
             <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
                 <hr className='line' />
                 <div className='text-center mb-5'>
-                    <h3 className='text-h3-bold'>Technologies I Use</h3>
+                    <h2 className='text-h3-bold'>Technologies I Use</h2>
                     <p className='mt-2' style={{ fontSize: '1.1rem', maxWidth: '700px', margin: '10px auto', color: '#4b5563',fontWeight: '600' }}>
                         A comprehensive overview of my technical stack, categorized for quick reading
                     </p>
@@ -47,9 +47,9 @@ export default function SkillSection({ skills, primaryColor }) {
                                     e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
                                 }}
                                 >
-                                    <h5 style={{ color: primaryColor, fontWeight: 'bold', marginBottom: '20px', fontSize: '1.15rem', borderBottom: `2px solid ${primaryColor}20`, paddingBottom: '12px' }}>
+                                    <h3 style={{ color: primaryColor, fontWeight: 'bold', marginBottom: '20px', fontSize: '1.15rem', borderBottom: `2px solid ${primaryColor}20`, paddingBottom: '12px' }}>
                                         {cat}
-                                    </h5>
+                                    </h3>
                                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px' }}>
                                         {categories[cat].map((skillName, sIdx) => {
                                             const s = getSkill(skillName);
@@ -72,7 +72,7 @@ export default function SkillSection({ skills, primaryColor }) {
                                                         boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
                                                         border: '1px solid #f3f4f6'
                                                     }}>
-                                                        <img src={require(`../assets/${s.logo}`)} alt={s.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                                                        <img src={require(`../assets/${s.logo}`)} alt={`${s.name} logo`} loading='lazy' decoding='async' style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
                                                     </div>
                                                     <span style={{ fontSize: '0.75rem', fontWeight: '600', color: '#4b5563', lineHeight: '1.2' }}>
                                                         {s.name}
