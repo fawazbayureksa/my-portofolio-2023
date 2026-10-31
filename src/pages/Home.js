@@ -132,17 +132,16 @@ const Home = () => {
                         Building <span style={{ color: primaryColor, fontWeight: 'bold' }}>enterprise-level</span> web & mobile applications
                     </h3>
                     
-                    <div style={{ display: 'flex', gap: '15px', marginBottom: '25px', flexWrap: 'wrap' }}>
+                    <div style={{ display: 'flex', gap: '15px', marginBottom: '25px', flexWrap: 'wrap',fontWeight: 'semi-bold' }}>
                         {STATS.map((stat, idx) => <StatCard key={idx} icon={stat.icon} label={stat.label} />)}
                     </div>
 
-                    <p style={{ fontSize: '1.05rem', marginBottom: '25px', color: '#333', maxWidth: '600px', lineHeight: '1.6' }}>
-                        Specialized in <strong style={{ color: primaryColor }}> Javascript, PHP, React.js, React Native, Laravel</strong>. 
-                        Currently start to learn how to be good at <strong style={{ color: accentColor }}>Golang</strong>
+                    <p style={{ fontSize: '1.05rem', marginBottom: '25px', color: '#333', maxWidth: '600px', lineHeight: '1.6',fontWeight: 'bold' }}>
+                        Specialized in <strong style={{ color: primaryColor }}> Javascript, PHP, React.js, React Native, Laravel, Golang</strong>
                     </p>
 
                     <div className='d-flex align-items-center py-3'>
-                        <a target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/1D8qApdKCmkFB67Jsy3G5xjEHc9Ud1Bk_/view?usp=sharing' 
+                        <a target="_blank" rel="noopener noreferrer" href='https://www.cake.me/pdf/s--LNBPb6lnn_yDud59N3Yq6w--/B0VyzJ.pdf' 
                             className='button mr-3' 
                             style={{ padding: '12px 30px', fontSize: '1rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
                             <i className="fas fa-download"></i>
