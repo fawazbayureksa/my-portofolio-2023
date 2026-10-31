@@ -11,7 +11,6 @@ import SkillSection from '../components/SkillSection';
 
 const primaryColor = '#3b82f6';     // Terracotta modern
 // const secondaryColor = '#60a5fa';   // Soft sand
-const accentColor = '#06b6d4';      // Rich brown
 // const thirdColor = '#1e40af';       // Warm caramel
 // const fourthColor = '#eff6ff';      // Off-white
 
