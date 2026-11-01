@@ -1,0 +1,47 @@
+# Fawwaz Bayureksa — Full Stack Developer
+
+> Fawwaz Bayureksa is a full stack developer based in Jakarta and Makassar, Indonesia. He builds enterprise web and mobile applications with React.js, React Native, Laravel, PHP, and Golang, and currently works in the fintech industry at PT Abadi Sejahtera Finansindo.
+
+## About
+
+Fawwaz Bayureksa has more than five years of experience delivering software. He holds an Associate's degree in Informatics Management from Politeknik LP3I Makassar and is a quick learner who adapts to new technologies and challenges. He is open to remote work and opportunities anywhere.
+
+## Expertise
+
+- Frontend and mobile: JavaScript, React.js, React Native, Next.js, Swift, Tailwind CSS
+- Backend and data: PHP, Laravel, Golang, SQL, MySQL, PostgreSQL, Redis, RabbitMQ
+- Cloud and services: Firebase, Supabase, Google Cloud Platform, Alibaba Cloud
+- DevOps and tools: GitLab, GitHub, Linux, Jira, Grafana, Prometheus, Jenkins
+- AI and productivity: Claude, ChatGPT, GitHub Copilot
+
+## Selected projects
+
+- [Warehouse Management System](https://fawwazbayureksa.xyz/#project): web platform for inventory and supply chain management.
+- [Mutu Sekolah](https://fawwazbayureksa.xyz/#project): school quality management and evaluation platform.
+- [OmniCare Platform](https://fawwazbayureksa.xyz/#project): multi-tenant enterprise customer service and ticketing platform.
+- [MyMoneyManage](https://fawwazbayureksa.xyz/#project): personal finance app for iOS, Android, and web.
+- [Tokodapur Ecosystem](https://fawwazbayureksa.xyz/#project): e-commerce and auction platform with a React Native mobile app.
+- [Singa Fintech](https://fawwazbayureksa.xyz/#project): marketing system and company landing page for a fintech company.
+
+## Experience
+
+- Full Stack Developer, PT Abadi Sejahtera Finansindo (January 2023 – present)
+- Front End Web & Mobile Developer, PT Tekindo Solusi Indonesia (April 2022 – December 2022)
+
+## Education
+
+- Informatics Management, Politeknik LP3I Makassar (2018–2021)
+- Accounting, SMK Negeri 1 Gowa (2015–2018)
+
+## Contact
+
+- Email: fawwazbayureksa@gmail.com
+- WhatsApp: +6282394418669
+- LinkedIn: https://www.linkedin.com/in/fawwaz-bayureksa-406b891a3/
+- GitHub: https://github.com/fawazbayureksa/
+- GitLab: https://gitlab.com/fawazbayureksa
+- X (Twitter): https://twitter.com/FawazBayureksa
+
+## Notes
+
+This is a single-page portfolio. Section anchors: `#about`, `#education`, `#experience`, `#project`, `#skill`, `#faq`, and `#contact`.

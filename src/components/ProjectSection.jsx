@@ -18,7 +18,7 @@ export default function ProjectSection({ projects, primaryColor, textColorWhite 
         <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
             <hr className='line' />
             <div className='text-center mb-5'>
-                <h3 className='text-h3-bold'>Featured Projects</h3>
+                <h2 className='text-h3-bold'>Featured Projects</h2>
                 <p className='mt-2' style={{ fontSize: '1.1rem', maxWidth: '700px', margin: '10px auto', color: '#4b5563', fontWeight: 'semi-bold' }}>
                     Showcasing enterprise-level solutions built with modern technologies
                 </p>
@@ -44,7 +44,7 @@ export default function ProjectSection({ projects, primaryColor, textColorWhite 
                         
                         return (
                             <div className={`${colClass} mb-4`} key={index}>
-                                <div 
+                                <article 
                                     onClick={() => setSelectedProject(item)}
                                     style={{ 
                                         backgroundColor: '#ffffff',
@@ -83,7 +83,9 @@ export default function ProjectSection({ projects, primaryColor, textColorWhite 
                                         )}
                                         <img 
                                             src={require(`../assets/projects/${item.image}`)} 
-                                            alt={item.name} 
+                                            alt={`${item.name} project screenshot`} 
+                                            loading='lazy'
+                                            decoding='async'
                                             style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
                                             onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.08)'}
                                             onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
@@ -91,7 +93,7 @@ export default function ProjectSection({ projects, primaryColor, textColorWhite 
                                     </div>
                                     
                                     <div style={{ padding: '25px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                                        <h5 style={{ color: '#1f2937', marginBottom: '12px', fontSize: '1.35rem', fontWeight: 'bold' }}>{item.name}</h5>
+                                        <h3 style={{ color: '#1f2937', marginBottom: '12px', fontSize: '1.35rem', fontWeight: 'bold' }}>{item.name}</h3>
                                         <p style={{ marginBottom: '20px', lineHeight: '1.7', color: '#5c6877', flexGrow: 1, fontSize: '0.75rem' ,fontWeight:'600'}}>{item.description}</p>
                                         
                                         <div className='d-flex align-items-center justify-content-between mt-auto pt-3' style={{ borderTop: '1px solid #f3f4f6' }}>
@@ -118,7 +120,7 @@ export default function ProjectSection({ projects, primaryColor, textColorWhite 
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </article>
                             </div>
                         )
                     })}
@@ -129,6 +131,9 @@ export default function ProjectSection({ projects, primaryColor, textColorWhite 
         {/* PROJECT GALLERY MODAL */}
         {selectedProject && (
             <div 
+                role='dialog'
+                aria-modal='true'
+                aria-label={`${selectedProject.name} project gallery`}
                 style={{
                     position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, 
                     backgroundColor: 'rgba(0,0,0,0.85)', zIndex: 9999,
@@ -147,6 +152,8 @@ export default function ProjectSection({ projects, primaryColor, textColorWhite 
                 >
                     <button 
                         onClick={() => setSelectedProject(null)}
+                        type='button'
+                        aria-label='Close project gallery'
                         style={{
                             position: 'absolute', top: '15px', right: '15px', zIndex: 10000,
                             background: 'rgba(0,0,0,0.5)', color: '#fff', border: 'none',
@@ -162,7 +169,7 @@ export default function ProjectSection({ projects, primaryColor, textColorWhite 
                     </button>
                     
                     <div style={{ padding: '20px', backgroundColor: '#f8f9fa', borderBottom: '1px solid #e5e7eb' }}>
-                        <h4 style={{ margin: 0, fontWeight: 'bold', color: '#1f2937' }}>{selectedProject.name}</h4>
+                        <h3 style={{ margin: 0, fontWeight: 'bold', color: '#1f2937' }}>{selectedProject.name}</h3>
                         <p style={{ margin: '5px 0 0 0', fontSize: '0.9rem', color: '#6b7280',fontWeight:'600'  }}>Project Gallery</p>
                     </div>
 
@@ -183,6 +190,7 @@ export default function ProjectSection({ projects, primaryColor, textColorWhite 
                                     <img 
                                         src={require(`../assets/projects/${gItem.image}`)} 
                                         alt={gItem.title} 
+                                        loading='lazy'
                                         style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                                     />
                                     <div style={{ position: 'absolute', bottom: '40px', left: 0, right: 0, textAlign: 'center', pointerEvents: 'none' }}>
@@ -198,6 +206,7 @@ export default function ProjectSection({ projects, primaryColor, textColorWhite 
                             <img 
                                 src={require(`../assets/projects/${selectedProject.image}`)} 
                                 alt={selectedProject.name} 
+                                loading='lazy'
                                 style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
                             />
                         </div>
