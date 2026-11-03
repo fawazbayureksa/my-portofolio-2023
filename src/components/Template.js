@@ -5,58 +5,50 @@ const Template = ({ children }) => {
 
     const buttonRef = useRef(null);
 
-    // Menjalankan efek setelah setiap render
     useEffect(() => {
-        // Mengakses elemen DOM menggunakan referensi DOM
         const button = buttonRef.current;
+        if (!button) return;
 
-        // Menambahkan event listener ke elemen DOM
-        button.addEventListener("click", () => {
-            // Mengatur posisi scroll ke atas halaman
+        const scrollToTop = () => {
             window.scrollTo({
-                top: 0, // Atas halaman
-                left: 0, // Kiri halaman
-                behavior: "smooth", // Gerakan yang halus
-            });
-        });
-
-        // Menghapus event listener saat component unmount
-        return () => {
-            button.removeEventListener("click", () => {
-                window.scrollTo({
-                    top: 0,
-                    left: 0,
-                    behavior: "smooth",
-                });
+                top: 0,
+                left: 0,
+                behavior: "smooth",
             });
         };
-    }, []); // Jangan jalankan efek lagi saat dependencies berubah
+
+        button.addEventListener("click", scrollToTop);
+
+        return () => {
+            button.removeEventListener("click", scrollToTop);
+        };
+    }, []);
 
     return (
         <div className='bg-content'>
+            <a href="#main-content" className='skip-link'>Skip to main content</a>
             <div className='container'>
                 <header>
-                    <nav className=''>
+                    <nav aria-label='Primary navigation'>
                         <a href="#about" className='animated-text'>ABOUT</a>
                         <a href="#education" className='animated-text'>EDUCATION</a>
                         <a href="#experience" className='animated-text'>EXPERIENCE</a>
                         <a href="#project" className='animated-text'>PROJECTS</a>
                         <a href="#skill" className='animated-text'>SKILL</a>
+                        <a href="#faq" className='animated-text'>FAQ</a>
                         <a href="#contact" className='animated-text'>CONTACT</a>
                     </nav>
                 </header>
             </div>
-            <div className='container animated-text pb-5'>
+            <main id='main-content' className='container animated-text pb-5'>
                 {children}
-            </div>
-            <section className='mt-5'>
-                <footer className="d-flex justify-content-center">
-                    <i className="fas fa-copyright mr-1"></i>
-                    <h6 className='font-weight-bold'> 2026 | Fawwaz Bayureksa</h6>
-                </footer>
-            </section>
-            <button ref={buttonRef} id='scroll-on-top-button'>
-                <i className='fas fa-plane'></i>
+            </main>
+            <footer className='mt-5 d-flex justify-content-center'>
+                <i className="fas fa-copyright mr-1" aria-hidden="true"></i>
+                <p className='font-weight-bold mb-0'>2026 | Fawwaz Bayureksa</p>
+            </footer>
+            <button ref={buttonRef} id='scroll-on-top-button' type='button' aria-label='Scroll back to top'>
+                <i className='fas fa-plane' aria-hidden="true"></i>
             </button>
         </div>
     );
