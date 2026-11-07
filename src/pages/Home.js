@@ -25,8 +25,9 @@ const ROLES = [
 ];
 
 const STATS = [
-    { icon: 'fas fa-briefcase', label: '5 Years Experience' },
-    { icon: 'fas fa-project-diagram', label: '8+ Projects Delivered' },
+    { icon: 'fas fa-briefcase', label: '5+ Years Experience' },
+    { icon: 'fas fa-project-diagram', label: '8+ Professional Projects Delivered' },
+    { icon: 'fab fa-github', label: '70+ GitHub Repositories', href: 'https://github.com/fawazbayureksa/?tab=repositories' },
     { icon: 'fas fa-building', label: 'Digital Industry' }
 ];
 
@@ -43,14 +44,27 @@ const EDUCATION_HISTORY = [
 ];
 
 const EXPERIENCE_HISTORY = [
-    { period: 'April 2022 - December 2022', role: 'Front End Web & Mobile Developer', company: 'PT TEKINDO SOLUSI INDONESIA' },
-    { period: 'January 2023 - Present', role: 'Full Stack Developer', company: 'PT ABADI SEJAHTERA FINANSINDO' }
+  {
+    period: 'April 2022 - December 2022',
+    role: 'Frontend & Mobile Developer',
+    company: 'PT TEKINDO SOLUSI INDONESIA',
+  },
+  {
+    period: 'January 2023 - Present',
+    role: 'Senior Full Stack Developer',
+    company: 'PT ABADI SEJAHTERA FINANSINDO',
+  },
+  {
+    period: '2026 - Present',
+    role: 'Freelance Full Stack Developer',
+    company: 'Open Collaboration and new opportunities',
+  },
 ];
 
 const FAQS = [
     {
         question: 'Who is Fawwaz Bayureksa?',
-        answer: 'Fawwaz Bayureksa is a full stack developer from Indonesia with more than five years of experience building enterprise web and mobile applications. He currently works as a Full Stack Developer at PT Abadi Sejahtera Finansindo in the fintech industry.'
+        answer: 'Fawwaz Bayureksa is a full stack developer from Indonesia with more than five years of experience building enterprise web and mobile applications. He wrote his first code in 2018 during his first semester of college, sparking his programming journey after taking the Algorithms and Programming (Algoritma dan Pemrograman) course. He currently works as a Full Stack Developer at PT Abadi Sejahtera Finansindo in the fintech industry.'
     },
     {
         question: 'Where is Fawwaz Bayureksa based?',
@@ -62,7 +76,7 @@ const FAQS = [
     },
     {
         question: 'What kind of projects has Fawwaz Bayureksa built?',
-        answer: 'His portfolio includes a warehouse management system, a school quality management platform, a multi-tenant customer service platform called OmniCare, a personal finance app for iOS, Android, and web, an e-commerce and auction platform, and fintech marketing and landing pages.'
+        answer: 'He has 50+ project repositories on GitHub, and his featured portfolio includes a warehouse management system, a school quality management platform, a multi-tenant customer service platform called OmniCare, a personal finance app for iOS, Android, and web, an e-commerce and auction platform, and fintech marketing and landing pages.'
     },
     {
         question: 'How can I contact Fawwaz Bayureksa?',
@@ -88,17 +102,29 @@ const RoleBadge = ({ icon, label }) => (
     </span>
 );
 
-const StatCard = ({ icon, label }) => (
-    <div style={{
-        backgroundColor: textColorWhite,
-        padding: '10px 15px',
-        borderRadius: '10px',
-        border: '1px solid ' + primaryColor,
-    }}>
-        <i className={icon} style={{ color: primaryColor, marginRight: '8px' }}></i>
-        <span style={{ fontSize: '0.95rem' }}>{label}</span>
-    </div>
-);
+const StatCard = ({ icon, label, href }) => {
+    const content = (
+        <div style={{
+            backgroundColor: textColorWhite,
+            padding: '10px 15px',
+            borderRadius: '10px',
+            border: '1px solid ' + primaryColor,
+        }}>
+            <i className={icon} style={{ color: primaryColor, marginRight: '8px' }}></i>
+            <span style={{ fontSize: '0.95rem', color: 'inherit' }}>{label}</span>
+        </div>
+    );
+
+    if (href) {
+        return (
+            <a href={href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                {content}
+            </a>
+        );
+    }
+
+    return content;
+};
 
 const TimelineCard = ({ period, title, subtitle, icon }) => (
     <div className='card-education mb-3'>
@@ -158,7 +184,7 @@ const Home = () => {
                     </p>
                     
                     <div style={{ display: 'flex', gap: '15px', marginBottom: '25px', flexWrap: 'wrap',fontWeight: 'bold' }}>
-                        {STATS.map((stat, idx) => <StatCard key={idx} icon={stat.icon} label={stat.label} />)}
+                        {STATS.map((stat, idx) => <StatCard key={idx} icon={stat.icon} label={stat.label} href={stat.href} />)}
                     </div>
 
                     <p style={{ fontSize: '1.05rem', marginBottom: '25px', color: '#333', maxWidth: '600px', lineHeight: '1.6',fontWeight: 'bold' }}>
