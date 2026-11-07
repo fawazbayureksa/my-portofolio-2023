@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.12a591c7.css",
-    "main.js": "/static/js/main.00dc143c.js",
+    "main.css": "/static/css/main.b6a1d8bf.css",
+    "main.js": "/static/js/main.6bc69b99.js",
     "static/js/787.9b7600af.chunk.js": "/static/js/787.9b7600af.chunk.js",
     "static/media/wms_login.png": "/static/media/wms_login.fb36241fda721c8a0707.png",
     "static/media/mutu_sekolah.png": "/static/media/mutu_sekolah.351aa5d22e2b3474b8b9.png",
@@ -79,12 +79,12 @@
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "static/media/gcp.svg": "/static/media/gcp.b11179b8e93782665379.svg",
     "static/media/rabbitmq.svg": "/static/media/rabbitmq.258baa7f7ef3862e8f0d.svg",
-    "main.12a591c7.css.map": "/static/css/main.12a591c7.css.map",
-    "main.00dc143c.js.map": "/static/js/main.00dc143c.js.map",
+    "main.b6a1d8bf.css.map": "/static/css/main.b6a1d8bf.css.map",
+    "main.6bc69b99.js.map": "/static/js/main.6bc69b99.js.map",
     "787.9b7600af.chunk.js.map": "/static/js/787.9b7600af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.12a591c7.css",
-    "static/js/main.00dc143c.js"
+    "static/css/main.b6a1d8bf.css",
+    "static/js/main.6bc69b99.js"
   ]
 }
